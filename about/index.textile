@@ -1,0 +1,28 @@
+---
+layout: post
+title: about me
+---
+<div id="about">
+h2. about me
+
+I'm a 32 year old guy living in Co. Kildare. I like to do lots of sports and outdoor activities. I play gaelic football, canoe polo and have done a few triathlons.  I also like to run.
+
+I represented Ireland for a number of years in canoe polo and played in 3 European Championships and 1 World Championship. I am also an international standard referee. I have completed 1 half-ironman and plan to do a full one at some stage in the near future.
+
+h2. about this site
+
+I wrote this site using "CakePHP":http://cakephp.org to track the mileage I do when training and commuting. I will be expanding it to track all the training I do, what equipment I use (and when to bin it) and anything else that I can think of tracking as time goes on.
+
+</div>
+
+<div id="contact_me">
+h2. contact me
+
+"!/images/email.png!EMail":mailto:griffinm@gmail.com
+"!/images/twitter.png!Twitter":http://www.twitter.com/griffinmike
+"!/images/tumblr.png!Tumblr":http://bucketofstuff.tumblr.com/
+</div>
+<div class="clear">&nbsp;</div>
+
+		</div>
+	</div>
