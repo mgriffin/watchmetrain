@@ -1,0 +1,15 @@
+---
+layout: post
+title: Match against Kildallen
+---
+h2. {{ page.title }}
+
+Tuesday, 18th May, 2010
+
+We had a match against Kildallen on Saturday evening. Two matches really, a B match and then an A match. We won both matches fairly easily in the end, even if the scores were a bit weird.
+
+The A match ended up 5-11 to 2-8. I was picked at midfield and told to play as a defensive midfielder. This meant that I was to stay back and cover any breaks through the centre of the pitch. This suited me alright as I had sprained my finger pretty badly the night before at training and I wasn't sure how it would hold up.
+
+It was a typical local derby match with some aggro and mouthing but luckily it didn't boil over at any stage. We also had to deal with the new rules on handpassing (now a closed fist pass) and taking sideline kicks. 
+
+Our next match is away against "Arvagh":http://www.arvaghgfc.com/ on Friday night

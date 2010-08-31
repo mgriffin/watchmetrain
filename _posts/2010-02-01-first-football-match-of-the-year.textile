@@ -1,0 +1,13 @@
+---
+layout: post
+title: First football match of the year
+---
+h2. {{ page.title }}
+
+Monday, 1st February, 2010
+
+We played the first match of the year on Saturday evening against Dromahair. I was playing midfield and scored a point in the second half. It's been that long since I scored in a match, I had almost forgotten what it felt like!
+
+We won pretty comfortably thanks to two early goals, but we still managed 20 wides over the course of the game. I was quite tired going into it because I had a late night and early morning before it. My own fault, but it wasn't an important match.
+
+I was a bit stiff on Sunday and today, which was to be expected as the match went on for 75 minutes instead of 60. There were a lot of tired bodies coming off that field.

@@ -1,0 +1,15 @@
+---
+layout: post
+title: The Shortest Day
+---
+h2. {{ page.title }}
+
+Monday, 21st December, 2009
+
+A lovely 13km run in this morning in the frost and crisp air. It was nice to see everyone wrapped up and hugging coffee cups for warmth while I was loping along past them.
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/6PdyvPYW6GSQxZ3fsv1e/map"></iframe>
+
+I took a couple of days off after the wedding on Friday to recharge and try and get some sleep. It seems to have worked well, I felt really good this morning. 
+
+I'm 20km behind where I should be today but I'm feeling good and should be able to get a few 15km runs to get me back on track. I'm looking forward to running on something that isn't concrete when I get home for Christmas, some trail running might be in order.

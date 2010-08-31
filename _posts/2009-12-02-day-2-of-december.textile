@@ -1,0 +1,15 @@
+---
+layout: post
+title: Day 2 of December
+---
+h2. {{ page.title }}
+
+Wednesday, 2nd December, 2009
+
+The run for day 2 was done earlier this morning, just under 10km from Chapelizod, up through the park, up the Kyber Pass and around by the zoo and Garda HQ before coming back along Parkgate St.
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/0sS72fi2et1i4zD1BFjj/map"></iframe>
+
+Oh yeah, I got yesterday's run done too. 10km around Chapelizod
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/oi5BTdmsvEFXZKfGvAk3/map"></iframe>

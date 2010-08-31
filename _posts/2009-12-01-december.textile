@@ -1,0 +1,11 @@
+---
+layout: post
+title: December
+---
+h2. {{ page.title }}
+
+Tuesday, 1st December, 2009
+
+Wow, it's December already. Time to start another challenge. Yeah, once again it's the "Run 200 miles in December" challenge. Last year ended in failure when there were too many weddings to go to. This year, I think I only have one to go to in December, so it might be a bit easier.
+
+Planning a quick 10k for this evening to get me started. It's cold and wet out but that'll only be a problem for getting out the door.

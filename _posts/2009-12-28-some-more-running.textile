@@ -1,0 +1,11 @@
+---
+layout: post
+title: Some more running
+---
+h2. {{ page.title }}
+
+Monday, 28th December, 2009
+
+I've done  a few runs now since I got home. I got a nice 20km done yesterday. 4 loops through the Claddagh Glen and then home via the lake. Then today it was home from the Shannon Pot via Cornahagh Cross, Cornagee, Killinagh Church and the lake before heading through Blacklion back to the house. Today was after spending two hours pushing a mountain bike through boggy snowy land and then a sweet road section that was under snow, slush and ice. That part was fun, I've never cycled through real slush and ice before but that was an experience. I learned a lot about how to ride through mud today. At least I can imagine that it's similar.
+
+Tomorrow, the plan is to head to Boho and tackle some forest sections. I hope we find enough to make the ride worthwhile, otherwise I'll be running home again and trying to put some distance in it again.

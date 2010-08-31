@@ -1,0 +1,14 @@
+---
+layout: post
+title: Slow run but double run day
+---
+h2. {{ page.title }}
+
+Tuesday, 15th December, 2009
+
+I had a slow run in to work today from Ballyfermot. A couple of niggles are starting to surface, I need to stretch a bit more often. My left foot is feeling tight and my right soleus as well. These are regular niggles, so I'm not too worried about them. I just have to keep them under control and not let them get any worse.
+
+I'll be going for a run this evening with Louise when I get home from work to bring the mileage up to where it should be.
+
+Here's my morning run route
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/OI5wW5GkTftxZq6DlPOD/map"></iframe>

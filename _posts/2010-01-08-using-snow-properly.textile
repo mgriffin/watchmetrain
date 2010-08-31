@@ -1,0 +1,19 @@
+---
+layout: post
+title: Using snow properly
+---
+h2. {{ page.title }}
+
+Friday, 8th January, 2010
+
+We've been in the grip of the coldest winter snap in a long time over the last three weeks and it has brought ice, sleet, frost and best of all, snow.  This has contributed to not doing any training over the last week or so. Well nothing that can be called training anyway. I've been out making snow balls, driving along icy roads and making snowmen.
+
+!/img/snowman.jpg!
+
+I made this guy when I was over in Louise's house in Mayo. It took ages of back breaking rolling of snowballs in the garden to make his body and head and some fantastic sculpting to join them all together.
+
+Unfortunately, some time during the night there was a murder...
+
+!/img/dead_snowman.jpg!
+
+Personally, I blame the cat.

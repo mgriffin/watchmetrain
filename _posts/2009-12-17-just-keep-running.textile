@@ -1,0 +1,13 @@
+---
+layout: post
+title: Just keep running
+---
+h2. {{ page.title }}
+
+Thursday, 17th December, 2009
+
+Just like Dory in Finding Nemo, I find myself singing "Just keep running" at times. I am getting into a rhythm of running into work and then going for a run at home in the evening, but for the first 10-15 minutes while I am warming up, I wonder why I am doing this.
+
+Once I warm up, it's all good and I only have to deal with a tight achilles tendon and almost tripping as I go up or down kerbs. 
+
+By this evening I'll be over 170km for the month and going well. I find that my legs and feet are getting tighter and that is probably down to not stretching after I finish my runs. I have tight calf muscles at the best of times and this extra running is definitely having an effect as well. A good massage probably wouldn't go astray either.

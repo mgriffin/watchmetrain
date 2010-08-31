@@ -1,0 +1,15 @@
+---
+layout: post
+title: Over 100km done
+---
+h2. {{ page.title }}
+
+Wednesday, 16th December, 2009
+
+Day 11 and I am up to 106km and change. A little behind where I need to be, but I think I can catch up.
+
+This morning was an extension of the Ballyfermot - Inchicore - Harolds Cross - Work run that brought it to just over 11km. It was another lovely morning for a run and quite busy on the paths near Baggot Street. After getting to the office I started to get some slight stomach cramps but I think that was to do with not having brekkie before leaving the house (bold Mike)
+
+Here's the route taken from "RunKeeper.com":http://www.runkeeper.com
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/tHID05v11hgHQ2g2uwKw/map"></iframe>

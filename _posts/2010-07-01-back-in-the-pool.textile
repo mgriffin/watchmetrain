@@ -1,0 +1,11 @@
+---
+layout: post
+title: Back in the pool
+---
+h2. {{ page.title }}
+
+Thursday, 1st July, 2010
+
+I went for a swim on my way home last night. Nothing major, I only managed to do 700m but it's a start. Part of the reason I only did that much was because I forgot my lock for the lockers and had to leave it open. I just didn't feel right doing that.
+
+I did a 100m sprint at the end of the session to gauge where I am and finished it in 1:38. I think this needs some work, but with it being my first session in a while, I wasn't too disappointed.

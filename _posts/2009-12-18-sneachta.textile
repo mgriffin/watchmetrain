@@ -1,0 +1,13 @@
+---
+layout: post
+title: Sneachta
+---
+h2. {{ page.title }}
+
+Friday, 18th December, 2009
+
+Wow, a dusting of snow greeted all of Celbridge this morning. A nice crisp morning, just perfect for a run. So off I went.
+
+I had planned a long run today, but I ran out of time and ended up doing just over 10km. Felt really good after the stretching and rolling last night. I think that proves that it has to be used more often.
+
+Off shortly to a wedding. More cold weather forecast, but at least it's dry for them today.

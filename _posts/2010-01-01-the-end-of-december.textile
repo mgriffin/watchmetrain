@@ -1,0 +1,15 @@
+---
+layout: post
+title: The end of December
+---
+h2. {{ page.title }}
+
+Friday, 1st January, 2010
+
+I didn't quite get the full 200 miles done in December but I got enough done to be happy with it. I did some longer runs, got some decent consistency, ran a race and didn't get injured. I think that's a pretty successful outcome.
+
+We had some untypically cold weather over Christmas which didn't make it easy to get out and when I came over to Mayo, the only place to run was on the main N17 road which just wasn't safe. I decided then to skip the last 2 days of running and to do some swimming instead. I went over to the new pool in Claremorris and got a couple of swims in. It felt strange getting back into the pool and the first day wasn't that productive.
+
+In the second session I noticed I had more of a feel for the water and I didn't get out of breath as easily. I was able to trot out 1km and then called it a day as the pool was closing. I suppose if I was to make a resolution at this time, it would have to be to get into the pool more often and consistently.
+
+That's it for the review. I think I'll be taking a few days off for a break before heading to the gym for some bulking up. I have a bleep test to do as well in a couple of weeks but I should be alright for that by now.

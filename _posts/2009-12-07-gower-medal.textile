@@ -1,0 +1,11 @@
+---
+layout: post
+title: Gower Medal
+---
+h2. {{ page.title }}
+
+Monday, 7th December, 2009
+
+I did the marathon in Gower at the weekend. I'll write up a report later on but during the meanwhilst, here's a pic of the medal: 
+!/img/medals/gower.jpg!
+I finished the slightly longer than marathon course in 4 hours and 48 minutes.

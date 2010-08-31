@@ -1,0 +1,13 @@
+---
+layout: post
+title: The third day
+---
+h2. {{ page.title }}
+
+Thursday, 3rd December, 2009
+
+Another day, another run. Almost the same route as yesterday but slightly longer to take it over 10k. I'm now up to 30k so far. Keep an eye on my progress over at <a href="http://watchmetrain.net">my new site</a> where I'm also mirroring all these blog posts.  I hope to move over to it permanently pretty soon, once I put the final finishing touches to it all.
+
+Here's the map of today's route, courtesy of <a href="http://runkeeper.com">Runkeeper</a>
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/do6AozZDHcgS5QYcSfk0/map"></iframe>

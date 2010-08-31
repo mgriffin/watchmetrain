@@ -1,0 +1,16 @@
+---
+layout: post
+title: A Great Run
+---
+h2. {{ page.title }}
+
+Sunday, 13th December, 2009
+
+This evening I went for a lovely little run. I wanted to get back on track so I decided I needed to get around 20km done. In the end I got to almost 18km.
+
+I did a loop with Louise, and then she went home and I went on to finish off another 11km. I upped the pace and surprised myself at how long I could keep a good pace going for. 
+
+I'm now up on around 124km or so for the month, still behind on the daily 10km needed to finish but not too bad. I'm planning a few 11-12km runs to bring me back on track over the next few days and then a nice long run next weekend.
+
+Here's the map of today's run:
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/hjHeUJK90e9IujibXLCo/map"></iframe>
