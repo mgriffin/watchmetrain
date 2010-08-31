@@ -1,0 +1,11 @@
+---
+layout: post
+title: blog archive
+---
+<div class="bloglist">
+<ol> 
+{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{ post.title }}</a><span class="blogdate">{{ post.date | date_to_string }}</span>
+{% endfor %}
+</ol>
+</div>
