@@ -1,0 +1,10 @@
+---
+tag: Football
+type: Match
+time: 3600
+distance: 0
+---
+First Championship match v Swanlinbar
+Lost 0-12 to 0-14
+Played wing forward, taken off in second half.
+Felt tired and run down from the start. Very warm evening.

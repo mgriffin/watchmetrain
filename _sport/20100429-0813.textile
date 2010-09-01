@@ -1,0 +1,7 @@
+---
+tag: Run
+type: Commute
+time: 2209
+distance: 7610
+---
+From Ballyfermot to the Luas track, follow the track to the Museum.

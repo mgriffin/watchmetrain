@@ -1,0 +1,7 @@
+---
+tag: Cycle
+type: Commute
+time: 4800
+distance: 29000
+---
+Met Louise at Parkgate street. Did a loop of the duathlon course and left the park though Knockmaroon gate. Down into Chapelizod and on home the normal way. Took it easy all the way.

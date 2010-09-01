@@ -1,0 +1,9 @@
+---
+tag: Football
+type: Training
+time: 3600
+distance: 0
+---
+3x 40m sprints
+Bleep test - finished at level 12.4
+Felt like I could go on for another few rounds, decided to stop as I was doing it on my own

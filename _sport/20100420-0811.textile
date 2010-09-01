@@ -1,0 +1,9 @@
+---
+tag: Run
+type: Commute
+time: 2089
+distance: 7590
+---
+Run into work from Ballyfermot. Felt slow but steady.
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/DMAPmbbo9Gl6hT7rAs3b/map"></iframe>

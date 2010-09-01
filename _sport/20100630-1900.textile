@@ -1,0 +1,7 @@
+---
+tag: Swim
+type: Training
+time: 1200
+distance: 700
+---
+100, 200, 300 and then 100 flat out. 1:38 for the 100m

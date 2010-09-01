@@ -1,0 +1,7 @@
+---
+tag: Run
+type: Training
+time: 1800
+distance: 5700
+---
+Run with Louise. Nice and easy pace just to stretch out the legs.

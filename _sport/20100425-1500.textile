@@ -1,0 +1,9 @@
+---
+tag: Football
+type: Match
+time: 3600
+distance: 0
+---
+v Laragh United away. 
+Won by 2 points. 
+Started in midfield. Moved to corner forward in first half and then to corner back for the second half. 

@@ -1,0 +1,7 @@
+---
+tag: Run
+type: Training
+time: 600
+distance: 2700
+---
+One lap of the duathlon run course with Belpark. Finished strongly after a mild start.

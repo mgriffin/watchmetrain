@@ -1,0 +1,7 @@
+---
+tag: Swim
+type: Training
+time: 1500
+distance: 600
+---
+500m and then 100m cool down

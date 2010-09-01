@@ -1,0 +1,12 @@
+---
+tag: Swim
+type: Training
+time: 1200
+distance: 1000
+---
+100m x3
+50m x1
+500m x1
+50m x3
+
+Taking it easy, checking out Westmanstown gym, with Tadhg and Caoimhe

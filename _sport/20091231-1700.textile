@@ -1,0 +1,6 @@
+---
+tag: Swim
+type: Training
+time: 1200
+distance: 1000
+---

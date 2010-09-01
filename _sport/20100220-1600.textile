@@ -1,0 +1,8 @@
+---
+tag: Football
+type: Match
+time: 4200
+distance: 0
+---
+Match v Glenfarne.
+Started at wing forward. Moved to wing back. Midfield in second half.

@@ -1,0 +1,9 @@
+---
+tag: Swim
+type: Training
+time: 3600
+distance: 2200
+---
+300 warm up
+100:200:300:400:300:200:100
+300 cool down, technique and other strokes

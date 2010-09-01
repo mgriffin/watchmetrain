@@ -1,0 +1,7 @@
+---
+tag: Cycle
+type: Training
+time: 20
+distance: 12000
+---
+Celbridge to Kilcock with Louise to pick the U21 team for the worlds

@@ -1,0 +1,7 @@
+---
+tag: Cycle
+type: Commute
+time: 2400
+distance: 20340
+---
+Into work on the tri bike in preparation for the Duathlon this evening

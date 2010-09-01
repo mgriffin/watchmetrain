@@ -1,0 +1,7 @@
+---
+tag: Cycle
+type: Commute
+time: 600
+distance: 5000
+---
+From Ballyfermot to work

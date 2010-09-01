@@ -1,0 +1,8 @@
+---
+tag: Cycle
+type: Training
+time: 3600
+distance: 30000
+---
+From Kilcock to Clane and back to Celbridge. Strong headwind all the way to Clane.
+Warm and dry otherwise.

@@ -1,0 +1,6 @@
+---
+tag: Football
+type: Training
+time: 6300
+distance: 0
+---

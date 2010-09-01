@@ -1,0 +1,11 @@
+---
+tag: Run
+type: Training
+time: 2160
+distance: 6000
+---
+Two runs with Louise in the Phoenix Park.
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/3AvzSRm4R92dJtBAvPH2/map"></iframe>
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/PQSknyalmA6oMMQVYnKN/map"></iframe>

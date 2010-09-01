@@ -1,0 +1,9 @@
+---
+tag: Run
+type: Training
+time: 2046
+distance: 6210
+---
+Easy run with Louise, John Judge, Sean Mac and Ronan.
+
+<iframe width="425" height="345" src="http://runkeeper.com/activityMap/83fgx"></iframe>

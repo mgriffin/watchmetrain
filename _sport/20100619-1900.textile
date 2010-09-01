@@ -1,0 +1,9 @@
+---
+tag: Football
+type: Match
+time: 3600
+distance: 0
+---
+Match v Mountnugent.
+Played at midfield.
+Won 2-13 to 1-9

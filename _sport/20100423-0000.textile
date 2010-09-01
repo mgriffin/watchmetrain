@@ -1,0 +1,7 @@
+---
+tag: Football
+type: Training
+time: 3600
+distance: 0
+---
+Match on the training pitch. Tweaked my groin in the warm up kicking

@@ -1,0 +1,7 @@
+---
+tag: Run
+type: Training
+time: 2400
+distance: 8000
+---
+Run in Donadea Forest Park. The distance is a guess as I did about one and a half laps of the walking route. Done with Louise.

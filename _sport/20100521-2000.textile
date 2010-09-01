@@ -1,0 +1,9 @@
+---
+tag: Football
+type: Match
+time: 3600
+distance: 0
+---
+Away match v Arva.
+Won 3-6 to 1-4.
+Played at midfield, had a good match by all accounts. Very warm evening.

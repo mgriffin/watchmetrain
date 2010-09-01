@@ -1,0 +1,7 @@
+---
+tag: Cycle
+type: Commute
+time: 1200
+distance: 11000
+---
+From work to the gym for a swim

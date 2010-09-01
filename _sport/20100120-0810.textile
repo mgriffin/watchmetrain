@@ -1,0 +1,9 @@
+---
+tag: Run
+type: Commute
+time: 1489
+distance: 5690
+---
+To work from Ballyfermot
+
+<iframe width="425" height="345" src="http://runkeeper.com/pub/act/6pfHjQ7mPfjT2cpdZLSC/map"></iframe>

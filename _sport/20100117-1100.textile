@@ -1,0 +1,38 @@
+---
+tag: Football
+type: Training
+time: 5400
+distance: 0
+---
+Warm up and stretching.
+30 minute match, 13 a side.
+Stamina running:
+1min slow jog
+2min half pace
+1min slow jog
+1min half pace
+1min three quarter pace
+1min slow jog
+1min half pace
+1min three quarter pace
+
+2min break
+
+1min slow jog
+2min half pace
+1min slow jog
+1min half pace
+1min three quarter pace
+1min slow jog
+1min half pace
+1min three quarter pace
+
+2min break
+
+1min slow jog
+2min three quarter pace
+1min slow jog
+1min three quarter pace
+1min full pace
+1min slow jog
+2min three quarter pace

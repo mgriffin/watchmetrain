@@ -1,0 +1,9 @@
+---
+tag: Football
+type: Match
+time: 3600
+distance: 0
+---
+Match away v Cornafaen
+Played at midfield
+Won 2-10 to 0-8

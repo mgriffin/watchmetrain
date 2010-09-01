@@ -1,0 +1,10 @@
+---
+tag: Run
+type: Training
+time: 2061
+distance: 5000
+---
+10 minute warm up
+4x 1 lap of football pitch (1:12 - 1:15)
+1 minute rest between each
+10 minute easy jog back to work
