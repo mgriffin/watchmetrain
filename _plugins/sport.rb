@@ -48,6 +48,10 @@ module Jekyll
 	  self.month = self.month/1000
 	  self.year = self.year/1000
 	  
+	  generate_progress(site)
+	end
+	
+	def generate_progress(site)
 	  output = <<EOF
 <div class="total">
 <a href="/week">
