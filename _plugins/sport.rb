@@ -87,12 +87,14 @@ module Jekyll
 </div>
 <div class="clear"></div>
 EOF
+	  Dir.mkdir(File.join(site.config['source'], '_includes')) unless File.exist?(File.join(site.config['source'], '_includes'))
 	  File.open(File.join(site.config['source'], '_includes', 'progress.html'), 'w') do |f|
 	    f.write(output)
 	  end
     end
 
 	def generate_more(site, data, file)
+	  Dir.mkdir(File.join(site.config['source'], file)) unless File.exist?(File.join(site.config['source'], file))
 	  File.open(File.join(site.config['source'], file, 'index.html'), 'w') do |w|
 		w.write(<<EOF)
 ---
