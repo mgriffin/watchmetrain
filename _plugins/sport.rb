@@ -35,7 +35,7 @@ module Jekyll
 		  date = File.basename(name, ".textile")
 		  narf = DateTime::strptime(date, "%Y%m%d-%H%M")
 		  date = narf.strftime("%d-%m-%Y")
-		  time = narf.strftime("%H:%M")
+		  
 		  if self.data.has_key?('distance')
 			self.week += self.data['distance'] if this_week?(date)
 			self.month += self.data['distance'] if this_month?(date)
@@ -49,6 +49,7 @@ module Jekyll
 	  self.year = self.year/1000
 	  
 	  generate_progress(site)
+	  generate_more(site)
 	end
 	
 	def generate_progress(site)
@@ -75,6 +76,20 @@ EOF
 	  end
     end
 
+	def generate_more(site)
+	  ['week', 'month', 'year'].each do |f|
+	    File.open(File.join(site.config['source'], f, 'index.textile'), 'w') do |w|
+		  w.write(<<EOF)
+---
+layout: default
+title: #{f}
+---
+|_.when|_.what|_.how far|_.how long|
+EOF
+	    end
+	  end
+	end
+	
 	def this_week?(date)
 	  Date.today.cweek == Date.strptime(date, "%d-%m-%Y").cweek ? true : false
 	end
