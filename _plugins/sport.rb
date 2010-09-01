@@ -58,6 +58,10 @@ module Jekyll
 	  self.month = self.month/1000
 	  self.year = self.year/1000
 	  
+	  self.weekly = sort_me(self.weekly)
+	  self.monthly = sort_me(self.monthly)
+	  self.yearly = sort_me(self.yearly)
+	  
 	  generate_progress(site)
 	  generate_more(site, self.weekly, 'week')
 	  generate_more(site, self.monthly, 'month')
@@ -120,6 +124,9 @@ EOF
 	end
 	def this_year?(date)
 	  Date.today.year == Date.strptime(date, "%d-%m-%Y").year ? true : false
+	end
+	def sort_me(data)
+	  data.sort {|x,y| y<=>x }
 	end
 
   end
