@@ -1,6 +1,7 @@
 require 'yaml'
 require 'date'
 require 'chronic'
+require 'chronic_duration'
 
 module Jekyll
   class Sport < Generator
@@ -18,11 +19,16 @@ module Jekyll
 	
 	attr_accessor :data, :content
 	attr_accessor :week, :month, :year
+	attr_accessor :weekly, :monthly, :yearly
 	
 	def initialize(site)
 	  self.week = 0.0
 	  self.month = 0.0
 	  self.year = 0.0
+	  
+	  self.weekly = {}
+	  self.monthly = {}
+	  self.yearly = {}
 	end
 	
     def generate(site)
@@ -35,6 +41,10 @@ module Jekyll
 		  date = File.basename(name, ".textile")
 		  narf = DateTime::strptime(date, "%Y%m%d-%H%M")
 		  date = narf.strftime("%d-%m-%Y")
+		  
+		  self.weekly[narf.strftime("%Y%m%d")] = {'when' => narf.strftime("%A"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_week?(date)
+		  self.monthly[narf.strftime("%Y%m%d")] = {'when' => narf.strftime("%A, %d"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_month?(date)
+		  self.yearly[narf.strftime("%Y%m%d")] = {'when' => narf.strftime("%A, %d %B"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_year?(date)
 		  
 		  if self.data.has_key?('distance')
 			self.week += self.data['distance'] if this_week?(date)
@@ -49,7 +59,9 @@ module Jekyll
 	  self.year = self.year/1000
 	  
 	  generate_progress(site)
-	  generate_more(site)
+	  generate_more(site, self.weekly, 'week')
+	  generate_more(site, self.monthly, 'month')
+	  generate_more(site, self.yearly, 'year')
 	end
 	
 	def generate_progress(site)
@@ -76,17 +88,27 @@ EOF
 	  end
     end
 
-	def generate_more(site)
-	  ['week', 'month', 'year'].each do |f|
-	    File.open(File.join(site.config['source'], f, 'index.textile'), 'w') do |w|
-		  w.write(<<EOF)
+	def generate_more(site, data, file)
+	  File.open(File.join(site.config['source'], file, 'index.html'), 'w') do |w|
+		w.write(<<EOF)
 ---
 layout: default
-title: #{f}
+title: #{file}
 ---
-|_.when|_.what|_.how far|_.how long|
+<table>
+<thead>
+<tr><th>when</th><th>what</th><th>how far</th><th>how long</th></tr>
+</thead>
+<tbody>
 EOF
-	    end
+		data.each do |blah,e|
+		  wen = e['when']
+		  what = e['what']
+		  far = e['far']
+		  long = ChronicDuration::output(e['long'], :format => :short)
+		  w.write("<tr><td>#{wen}</td><td>#{what}</td><td>#{far}km</td><td>#{long}</td></tr>")
+		end
+		w.write("</tbody></table>")
 	  end
 	end
 	
@@ -99,5 +121,6 @@ EOF
 	def this_year?(date)
 	  Date.today.year == Date.strptime(date, "%d-%m-%Y").year ? true : false
 	end
+
   end
 end
