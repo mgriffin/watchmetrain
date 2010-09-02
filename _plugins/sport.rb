@@ -17,7 +17,7 @@ module Jekyll
       name =~ MATCHER
     end
 	
-	attr_accessor :data, :content
+	attr_accessor :data, :content, :date
 	attr_accessor :week, :month, :year
 	attr_accessor :weekly, :monthly, :yearly
 	
@@ -26,9 +26,9 @@ module Jekyll
 	  self.month = 0.0
 	  self.year = 0.0
 	  
-	  self.weekly = {}
-	  self.monthly = {}
-	  self.yearly = {}
+	  self.weekly = []
+	  self.monthly = []
+	  self.yearly = []
 	end
 	
     def generate(site)
@@ -38,14 +38,15 @@ module Jekyll
 	  
 	  entries.each do |name|
 	    if valid?(name)
+		  self.process(name)
 		  self.read_yaml(base, name)
 		  date = File.basename(name, ".textile")
 		  narf = DateTime::strptime(date, "%Y%m%d-%H%M")
 		  date = narf.strftime("%d-%m-%Y")
 		  
-		  self.weekly[narf.strftime("%Y%m%d")] = {'when' => narf.strftime("%A"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_week?(date)
-		  self.monthly[narf.strftime("%Y%m%d")] = {'when' => narf.strftime("%A, %d"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_month?(date)
-		  self.yearly[narf.strftime("%Y%m%d")] = {'when' => narf.strftime("%A, %d %B"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_year?(date)
+		  self.weekly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_week?(date)
+		  self.monthly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A, %d"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_month?(date)
+		  self.yearly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A, %d %B"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_year?(date)
 		  
 		  if self.data.has_key?('distance')
 			self.week += self.data['distance'] if this_week?(date)
@@ -110,7 +111,7 @@ title: #{file}
 EOF
 
 		odd = true
-		data.each do |blah,e|
+		data.each do |e|
 		  wen = e['when']
 		  what = e['what']
 		  far = e['far']
@@ -138,19 +139,28 @@ EOF
 	  Date.today.year == Date.strptime(date, "%d-%m-%Y").year ? true : false
 	end
 	def sort_me(data)
-	  data.sort {|x,y| y<=>x }
+	  data = data.sort_by {|c| "#{:date}" }
+	  data.reverse
 	end
 
 	# Filter out any files/directories that are hidden or backup files (start
     # with "." or "#" or end with "~"), or contain site content (start with "_"),
-    # or are excluded in the site configuration, unless they are web server
-    # files such as '.htaccess'
+    # unless they are web server files such as '.htaccess'
     def filter_entries(entries)
       entries = entries.reject do |e|
         unless ['.htaccess'].include?(e)
           ['.', '_', '#'].include?(e[0..0]) || e[-1..-1] == '~'
         end
       end
+    end
+	
+	# Extract information from the sport filename
+    #   +name+ is the String filename of the sport file
+    #
+    # Returns nothing
+    def process(name)
+      m, date, ext = *name.match(MATCHER)
+      self.date = date
     end
   end
 end
