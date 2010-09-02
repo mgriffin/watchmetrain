@@ -13,7 +13,7 @@ module Jekyll
     #   20100830-1715.textile
     #
     # Returns <Bool>
-    def self.valid?(name)
+    def valid?(name)
       name =~ MATCHER
     end
 	
@@ -33,10 +33,11 @@ module Jekyll
 	
     def generate(site)
 	  base = File.join(site.config['source'], '_sport')
+	  return unless File.exists?(base)
+	  entries = Dir.chdir(base) { filter_entries(Dir['**/*']) }
 	  
-	  Dir.chdir(File.join(site.config['source'], '_sport'))
-      Dir.new(Dir.pwd).entries.each do |name|
-	    if File.file?(name)
+	  entries.each do |name|
+	    if valid?(name)
 		  self.read_yaml(base, name)
 		  date = File.basename(name, ".textile")
 		  narf = DateTime::strptime(date, "%Y%m%d-%H%M")
@@ -107,12 +108,21 @@ title: #{file}
 </thead>
 <tbody>
 EOF
+
+		odd = true
 		data.each do |blah,e|
 		  wen = e['when']
 		  what = e['what']
 		  far = e['far']
 		  long = ChronicDuration::output(e['long'], :format => :short)
-		  w.write("<tr><td>#{wen}</td><td>#{what}</td><td>#{far}km</td><td>#{long}</td></tr>")
+		  if odd
+			w.write("<tr class=\"other\">")
+			odd = false
+		  else
+		    w.write("<tr>")
+			odd = true
+		  end
+		  w.write("<td>#{wen}</td><td>#{what}</td><td>#{far}km</td><td>#{long}</td></tr>")
 		end
 		w.write("</tbody></table>")
 	  end
@@ -131,5 +141,16 @@ EOF
 	  data.sort {|x,y| y<=>x }
 	end
 
+	# Filter out any files/directories that are hidden or backup files (start
+    # with "." or "#" or end with "~"), or contain site content (start with "_"),
+    # or are excluded in the site configuration, unless they are web server
+    # files such as '.htaccess'
+    def filter_entries(entries)
+      entries = entries.reject do |e|
+        unless ['.htaccess'].include?(e)
+          ['.', '_', '#'].include?(e[0..0]) || e[-1..-1] == '~'
+        end
+      end
+    end
   end
 end
