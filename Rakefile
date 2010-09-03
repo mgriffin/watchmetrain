@@ -1,6 +1,7 @@
 # adapted from  http://github.com/appden/appden.github.com/blob/master/Rakefile
 
 require 'rake/clean'
+require File.join(Dir.pwd + '/_plugins/date.rb')
 
 desc 'Build site with Jekyll'
 task :build => [:clean] do
@@ -25,10 +26,13 @@ task :post do
     exit(-1)
   end
 
-  date = Time.now.strftime('%Y-%m-%d')
+  now = Time.now
+  date = now.strftime('%Y-%m-%d')
   slug = title.strip.downcase.gsub(/[^a-z0-9 ]/, '')
   slug = slug.gsub(/ /, '-')
 
+  long_date = now.strftime("#{now.day.ordinalize} of %B, %Y")
+  time = Time.now.strftime('')
   # E.g. 20060716-1141-phoenix-park-duathlon.textile
   path = "#{ROOT_DIR}/_posts/#{date}-#{slug}.textile"
 
@@ -38,6 +42,9 @@ title: #{title}
 tags:  [#{tags}]
 layout: post
 ---
+h2. {{ page.title }}
+
+#{long_date}
 
 END
 
