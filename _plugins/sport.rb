@@ -45,8 +45,8 @@ module Jekyll
 		  date = narf.strftime("%d-%m-%Y")
 		  
 		  self.weekly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_week?(date)
-		  self.monthly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A, %d"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_month?(date)
-		  self.yearly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A, %d %B"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_year?(date)
+		  self.monthly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A, #{narf.day.ordinalize}"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_month?(date)
+		  self.yearly << {'date' => narf.strftime("%Y%m%d"), 'when' => narf.strftime("%A, #{narf.day.ordinalize} %B"), 'what' => [self.data['tag'], self.data['type']].join(', '), 'far' => self.data['distance']/1000, 'long' => self.data['time']} if this_year?(date)
 		  
 		  if self.data.has_key?('distance')
 			self.week += self.data['distance'] if this_week?(date)

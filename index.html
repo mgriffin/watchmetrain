@@ -7,7 +7,7 @@ title: index
 <div class="bloglist">
 <ol>    
 {% for post in site.posts limit:5 %}
-<li><a href="{{ post.url }}">{{ post.title }}</a><span class="blogdate">{{ post.date | date: "%a, %d %b %Y"  }}</span>
+<li><a href="{{ post.url }}">{{ post.title }}</a><span class="blogdate">{{ post.date | short_date }}</span>
 {% endfor %}
 </li>
 
