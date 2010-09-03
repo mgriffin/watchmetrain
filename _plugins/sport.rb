@@ -7,6 +7,9 @@ module Jekyll
   class Sport < Generator
     include Convertible
 	
+	safe true
+    priority :normal
+	
 	MATCHER = /^(.+\/)*(\d{4}\d{2}\d{2}-\d{2}\d{2})(\.[^.]+)$/
 
     # Sport name validator. Sport filenames must be like:
