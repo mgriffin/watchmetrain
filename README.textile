@@ -1,7 +1,7 @@
-"http://watchmetrain.net":http://watchmetrain.net
+h2. "http://watchmetrain.net":http://watchmetrain.net
 
 This is the raw source to my site at "http://watchmetrain.net":http://watchmetrain.net
 
 Feel free to browse around and see what I've done.
 
-Don't take things from _posts/ or images/. Otherwise it's all fair game, but don't just do a complete site copy, please.
+Don't take things from @_posts/@ or @images/@. Otherwise it's all fair game, but don't just do a complete site copy, please.
