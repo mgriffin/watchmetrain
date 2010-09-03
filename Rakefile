@@ -13,42 +13,35 @@ task :server => [:clean]  do
   jekyll('--server')
 end
 
-desc 'Build and deploy'
-task :deploy => :build do
-  sh 'rsync -rtzhavz --delete _site/ mmonteleone@newevestudio.com:domains/michaelmonteleone.net/public_html'
-end
-
 desc 'Begin a new post'
 task :post do   
   ROOT_DIR = File.dirname(__FILE__)
 
   title = ARGV[1]
-  tags = ARGV[2 ]
+  tags = ARGV[2]
 
   unless title
     puts %{Usage: rake post "The Post Title"["Tag 1, Tag 2"]}
     exit(-1)
   end
 
-  datetime = Time.now.strftime('%Y-%m-%d')  # 30 minutes from now.
-  slug = title.strip.downcase.gsub(/ /, '-')
+  date = Time.now.strftime('%Y-%m-%d')
+  slug = title.strip.downcase.gsub(/[^a-z0-9 ]/, '')
+  slug = slug.gsub(/ /, '-')
 
-  # E.g. 2006-07-16_11-41-batch-open-urls-from-clipboard.markdown
-  path = "#{ROOT_DIR}/_posts/#{datetime}-#{slug}.markdown"
+  # E.g. 20060716-1141-phoenix-park-duathlon.textile
+  path = "#{ROOT_DIR}/_posts/#{date}-#{slug}.textile"
 
   header = <<-END
 ---
 title: #{title}
 tags:  [#{tags}]
 layout: post
-description: Description Content
-comments: false
 ---
 
 END
 
   File.open(path, 'w') {|f| f << header }
-  system("mate", "-a", path)    
 end  
 
 task :default => :build

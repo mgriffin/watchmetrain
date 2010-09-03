@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	{% if page.title %}
-    <title>{{ page.title }} &mdash; {{ site.title }}</title>
+    <title>{{ site.title }} &mdash; {{ page.title }}</title>
     {% else %}
     <title>{{ site.title }}</title>
     {% endif %}
@@ -16,7 +16,7 @@
     {% endif %}
     <meta name="keywords" content="{{ keywords | join: "," }}" />
     <meta name="author" content="{{ site.author.name }}" />
-    <link rel="alternate" type="application/atom+xml" title="{{ site.author.name }}" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.author.name }}" href="/feed.xml" />
 	<meta name="viewport" content="width=690" />
 </head>
 <body>
@@ -39,8 +39,10 @@
 		</div>
 	</div>
 	<div id="footer">
-        <p class="quiet">All training done by <a href="/about">Mike Griffin</a>        <a href="http://feeds.feedburner.com/Watchmetrainnet-RecentPosts"><img src="/images/feed-icon-14x14.png" alt="Subscribe to the feed" /></a></p>
+        <p class="quiet">All training done by <a href="/about">Mike Griffin</a>        
+		<a href="http://feeds.feedburner.com/Watchmetrainnet-RecentPosts">
+		<img src="/images/feed-icon-14x14.png" alt="Subscribe to the feed" /></a>
+		</p>
 	</div>
-{% include analytics.html %}
 </body>
 </html>
