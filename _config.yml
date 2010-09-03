@@ -12,5 +12,5 @@ author:
 
 exclude:
  - Rakefile
- - README.markdown
+ - README.textile
  - .git
