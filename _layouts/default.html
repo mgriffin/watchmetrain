@@ -1,11 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>
-		Watchmetrain - {{ page.title }}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	{% if page.title %}
+    <title>{{ page.title }} &mdash; {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
 	<link rel="stylesheet" type="text/css" href="/css/screen.css" />
 	<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	{% assign keywords = site.keywords %}
+    {% if page.keywords %}
+        {% assign keywords = page.keywords %}
+    {% endif %}
+    <meta name="keywords" content="{{ keywords | join: "," }}" />
+    <meta name="author" content="{{ site.author.name }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ site.author.name }}" href="/feed.xml">
+	<meta name="viewport" content="width=800" />
 </head>
 <body>
 	<div id="header">
