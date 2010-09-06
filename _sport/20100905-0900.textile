@@ -1,0 +1,8 @@
+---
+tag: Swim
+type: Race
+time: 0:36:30
+distance: 1900
+---
+Ireland's Eye to Howth
+Calm but very salty
