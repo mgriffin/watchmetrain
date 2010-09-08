@@ -54,7 +54,7 @@ end
 task :default => :build
 
 # clean deletes built copies
-CLEAN.include(['_site/','week','month','year','_includes/progress.html'])
+CLEAN.include(['_site/'])
 
 def jekyll(opts = '')
   sh 'jekyll ' + opts
