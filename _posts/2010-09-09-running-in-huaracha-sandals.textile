@@ -1,0 +1,14 @@
+---
+title: Running in Huaracha sandals
+tags:  []
+layout: post
+---
+h2. {{ page.title }}
+
+9th of September, 2010
+
+I went for a run last night in the Phoenix Park with Louise, Sean Mac and Clare. Just a slowish couple of laps of the duathlon course from during the summer. I decided to use the new running sandals that I got from "Barefoot Ted":http://www.barefootted.com.
+
+!/images/huaracha.jpg!
+
+After stopping a couple of times to retie and tighten up the lacing, I felt really good running around. No chafing, pain or awkwardness. And the same today as well. No pain in my achilles or calves. I guess running on the grass helped too.
