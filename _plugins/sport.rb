@@ -8,7 +8,7 @@ module Jekyll
     include Convertible
 	
 	safe true
-    priority :normal
+    priority :high
 	
 	MATCHER = /^(.+\/)*(\d{4}\d{2}\d{2}-\d{2}\d{2})(\.[^.]+)$/
 
