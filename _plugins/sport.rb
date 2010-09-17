@@ -1,6 +1,5 @@
 require 'yaml'
 require 'date'
-require 'chronic'
 require 'chronic_duration'
 
 module Jekyll
@@ -39,7 +38,7 @@ module Jekyll
 	  return unless File.exists?(base)
 	  entries = Dir.chdir(base) { filter_entries(Dir['**/*']) }
 	  
-	  entries.sort!
+	  entries.reverse!
 	  entries.each do |name|
 	    if valid?(name)
 		  self.process(name)
@@ -63,10 +62,6 @@ module Jekyll
 	  self.week = self.week/1000
 	  self.month = self.month/1000
 	  self.year = self.year/1000
-	  
-	  self.weekly = sort_me(self.weekly)
-	  self.monthly = sort_me(self.monthly)
-	  self.yearly = sort_me(self.yearly)
 	  
 	  generate_progress(site)
 	  generate_more(site, self.weekly, 'week')
@@ -141,10 +136,6 @@ EOF
 	end
 	def this_year?(date)
 	  Date.today.year == Date.strptime(date, "%d-%m-%Y").year ? true : false
-	end
-	def sort_me(data)
-	  data = data.sort_by {|c| "#{:date}" }
-	  data.reverse
 	end
 
 	# Filter out any files/directories that are hidden or backup files (start
