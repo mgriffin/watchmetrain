@@ -39,6 +39,7 @@ module Jekyll
 	  return unless File.exists?(base)
 	  entries = Dir.chdir(base) { filter_entries(Dir['**/*']) }
 	  
+	  entries.sort!
 	  entries.each do |name|
 	    if valid?(name)
 		  self.process(name)
@@ -118,7 +119,7 @@ EOF
 		  wen = e['when']
 		  what = e['what']
 		  far = e['far'].to_f/1000
-		  long = ChronicDuration::output(e['long'], :format => :short)
+		  long = ChronicDuration.output(e['long'], :format => :short)
 		  if odd
 			w.write("<tr class=\"other\">")
 			odd = false
