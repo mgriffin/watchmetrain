@@ -1,0 +1,7 @@
+---
+tag: Cycle
+type: Commute
+time: 0:40:00
+distance: 20290
+---
+Commute in with Louise as far as Chaplizod
