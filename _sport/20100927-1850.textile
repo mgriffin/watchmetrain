@@ -1,0 +1,7 @@
+---
+tag: Run
+type: Training
+time: 0:32:40
+distance: 6200
+---
+Run with Louise around the loop in Celbridge
