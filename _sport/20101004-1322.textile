@@ -1,0 +1,8 @@
+---
+tag: Run
+type: Training
+time: 0:39:00
+distance: 9290
+---
+Run in the Phoenix Park in new runners (pair I)
+<iframe width="425" height="345" src="http://runkeeper.com/activityMap/akydk"></iframe>
