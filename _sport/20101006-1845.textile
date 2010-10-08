@@ -1,0 +1,11 @@
+---
+tag: Run
+type: Training
+time: 1:03:00
+distance: 10600
+---
+Gentle warm up jog from work to the papal cross. (14 mins)
+On the duathlon course, 1500m slow and jog back across the grass.
+1500m in 7:08, walk back across the grass to start (6:36)
+1500m in 5:24, rest for 3:35
+1500m (other direction) in 4:28, 7 minute rest and cool down
