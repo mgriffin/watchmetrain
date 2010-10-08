@@ -1,0 +1,17 @@
+- if logged_in?
+  %p.admin 
+    &laquo; 
+    %a{:href => '/drafts/'+@article.slug, :accesskey => 'r'}Revise
+    &raquo;
+%h3
+  = @article.title
+  - unless @article.published?
+    %span.unpublished [not yet live]
+.date= @article.date
+.article= @article.html_body
+.tags 
+  -if @article.tags.size > 0
+    More in
+    = @article.tags.map { |t| "<a href=\"/tags/"+t.name+"\">"+t.name+"</a>" }.join(', ')
+  -else
+    No tags for this post

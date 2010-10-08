@@ -1,0 +1,9 @@
+- if logged_in?
+  %p.admin 
+    &laquo; 
+    %a{:href => '/drafts/new', :accesskey => 'n'}New
+    &raquo;
+~ haml :progress, :layout => :none
+~ haml :home, :layout => :none
+%h3
+  %a{:href => '/blog'}More posts

@@ -1,0 +1,18 @@
+- if @article.id
+  %p.admin 
+    &laquo; 
+    %a{:href => '/blog/'+@article.slug, :accesskey => 'r'}Leave as is
+    &raquo;
+%form{:method => :post, :id => "draft", :action => "/drafts"}
+  %input{:type => "hidden", :name => "id", :value => @article.id}
+  %h3
+    %input{:type => "text", :name => "title", :value => @article.title}
+    - unless @article.published?
+      %span.unpublished [not yet live]
+  .date= @article.date
+  .article
+    %textarea{:name => "body"}= @article.body
+  .tags 
+    %input{:type => "text", :name => "tags", :value => @article.tags.map { |t| t.name }.join(', ') }
+  %input{:type => "submit", :name => "submit", :value => "save"}
+  %input{:type => "submit", :name => "submit", :value => "publish"}

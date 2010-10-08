@@ -1,0 +1,11 @@
+%html
+  %head
+    %title 
+      mikegriffin
+      = " - #{@title}" unless @title.nil?
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/error.css" />
+  %body
+    = yield
+    -if production?
+      ~ haml :google_analytics, :layout => :none
