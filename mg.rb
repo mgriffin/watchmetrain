@@ -32,6 +32,21 @@ get '/' do
   haml :list
 end
 
+get '/week' do
+  @sports = Exercise.filter(:when => Time.now.start_of_week...Time.now.end_of_week)
+  haml :sport_log
+end
+
+get '/month' do
+  @sports = Exercise.filter(:when => Time.now.start_of_month...Time.now.end_of_month)
+  haml :sport_log
+end
+
+get '/year' do
+  @sports = Exercise.filter(:when => Time.now.start_of_year...Time.now.end_of_year)
+  haml :sport_log
+end
+
 get '/blog/archive' do
   if logged_in?
     @articles = Article.order(:publish_date.desc)

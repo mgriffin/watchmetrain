@@ -1,0 +1,16 @@
+%table
+  %thead
+    %tr
+      %th when
+      %th what
+      %th how far
+      %th how long
+  %tbody
+    -@sports.each do |s|
+      %tr{ :class => alternate('other', '') }
+        %td= short_date(s.when)
+        %td what
+        %td
+          = s.distance.to_f/1000
+          km
+        %td= s.taken.strftime("%H:%M:%S")
