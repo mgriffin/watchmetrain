@@ -1,0 +1,20 @@
+- if @exercise.id
+  %p.admin 
+    &laquo; 
+    %a{:href => '/', :accesskey => 'r'}Leave as is
+    &raquo;
+%form{:method => :post, :action => '/sport'}
+  %input{:type => "hidden", :name => "id", :value => @exercise.id}
+  %label{:for => "when"}When
+  %input{:id => "when", :name => "when", :type => "text", :value => @exercise.when, :tabindex => 1}
+  %br
+  %label{:for => "when"}How long
+  %input{:id => "taken", :name => "taken", :type => "text", :value => ChronicDuration.output(@exercise.taken, :format => :short), :tabindex => 2}
+  %br
+  %label{:for => "when"}How far
+  %input{:id => "distance", :name => "distance", :type => "text", :value => @exercise.kmdistance, :tabindex => 3}
+  %br
+  %label{:for => "tags"}Tags
+  %input{:type => "text", :name => "tags", :value => @exercise.tags.map { |t| t.name }.join(', '), :tabindex => 4}
+  %br
+  %input{:id => "submit", :type => "submit", :value => "add", :tabindex => 5}

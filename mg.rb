@@ -5,6 +5,9 @@ require 'redcloth'
 require 'digest/sha1'
 require 'rack-flash'
 require 'xml-sitemap'
+require 'chronic'
+require 'chronic_duration'
+require 'chronic_distance'
 
 require 'db'
 require 'helper'
@@ -45,6 +48,26 @@ end
 get '/year' do
   @sports = Exercise.filter(:when => Time.now.start_of_year...Time.now.end_of_year)
   haml :sport_log
+end
+
+get '/sport/new' do
+  login_required
+  @exercise = Exercise.new
+  haml :sport_new
+end
+get '/sport/:id' do
+  login_required
+  @exercise = Exercise.first(:id => params[:id])
+  haml :sport_new
+end
+post '/sport' do
+  login_required
+  @exercise = 
+    if params[:id].empty?
+      Exercise.create
+    else
+      Exercise[params[:id].to_i]
+    end
 end
 
 get '/blog/archive' do

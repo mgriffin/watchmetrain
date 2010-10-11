@@ -11,7 +11,5 @@
         %td= short_date(s.when)
         %td 
           = s.tags.map { |t| t.name }.join(', ')
-        %td
-          = s.distance.to_f/1000
-          km
-        %td= s.taken.strftime("%H:%M:%S")
+        %td= ChronicDistance.output(s.distance, :format => :short, :unit => 'kilometers')
+        %td= ChronicDuration.output(s.taken, :format => :short)

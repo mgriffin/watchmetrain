@@ -86,4 +86,10 @@ class Exercise < Sequel::Model
     {:week => week.to_f/1000, :month => month.to_f/1000, :year => year.to_f/1000 }
   end
 
+  def distance=(d)
+    @distance = ChronicDistance.parse(d)
+  end
+  def kmdistance
+    @distance = ChronicDistance.output(distance, :format => :short, :unit => 'kilometers')
+  end
 end

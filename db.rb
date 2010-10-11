@@ -53,7 +53,7 @@ if !DB.table_exists?(:exercises)
   DB.create_table! :exercises do
     primary_key :id
     Time :when
-    Time :taken
+    Integer :taken
     Integer :distance
   end
 end
@@ -105,9 +105,9 @@ DB[:articles_tags].insert(:tag_id => 3, :article_id => 4)
 
 DB[:users].insert(:username => "mike", :hashed_password => "3cf448e735f411d7e46bafe79388adaced8f7109", :salt => "A L0ng sAl7", :name => "Mike")
 
-DB[:exercises].insert(:when => '2010-10-08 08:04:00', :taken => '00:43:24', :distance => '20360')
-DB[:exercises].insert(:when => '2010-10-06 18:45:00', :taken => '01:03:00', :distance => '10600')
-DB[:exercises].insert(:when => '2010-09-06 18:45:00', :taken => '01:03:00', :distance => '10600')
+DB[:exercises].insert(:when => '2010-10-08 08:04:00', :taken => '2604', :distance => '20360000')
+DB[:exercises].insert(:when => '2010-10-06 18:45:00', :taken => '3780', :distance => '10600000')
+DB[:exercises].insert(:when => '2010-09-06 18:45:00', :taken => '3780', :distance => '10600000')
 
 DB[:exercises_tags].insert(:tag_id => 4, :exercise_id => 1)
 DB[:exercises_tags].insert(:tag_id => 6, :exercise_id => 1)
