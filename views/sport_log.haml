@@ -9,7 +9,8 @@
     -@sports.each do |s|
       %tr{ :class => alternate('other', '') }
         %td= short_date(s.when)
-        %td what
+        %td 
+          = s.tags.map { |t| t.name }.join(', ')
         %td
           = s.distance.to_f/1000
           km

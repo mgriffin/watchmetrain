@@ -96,6 +96,7 @@ DB[:tags].insert(:name => "cheese")
 DB[:tags].insert(:name => "grammar")
 DB[:tags].insert(:name => "cycle")
 DB[:tags].insert(:name => "run")
+DB[:tags].insert(:name => "training")
 
 DB[:articles_tags].insert(:tag_id => 1, :article_id => 1)
 DB[:articles_tags].insert(:tag_id => 2, :article_id => 1)
@@ -109,6 +110,8 @@ DB[:exercises].insert(:when => '2010-10-06 18:45:00', :taken => '01:03:00', :dis
 DB[:exercises].insert(:when => '2010-09-06 18:45:00', :taken => '01:03:00', :distance => '10600')
 
 DB[:exercises_tags].insert(:tag_id => 4, :exercise_id => 1)
+DB[:exercises_tags].insert(:tag_id => 6, :exercise_id => 1)
 DB[:exercises_tags].insert(:tag_id => 5, :exercise_id => 2)
+DB[:exercises_tags].insert(:tag_id => 6, :exercise_id => 2)
 
 require 'data/models'
