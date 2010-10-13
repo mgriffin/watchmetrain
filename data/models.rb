@@ -80,10 +80,10 @@ class Exercise < Sequel::Model
   many_to_many :tags
   
   def self.totals
-    week = Exercise.filter(:when => Time.now.start_of_week...Time.now.end_of_week).sum(:distance)
+    week = Exercise.filter(:when => Time.now.start_of_week...Time.now.end_of_week).sum(:distance) || 0
     month = Exercise.filter(:when => Time.now.start_of_month...Time.now.end_of_month).sum(:distance)
     year = Exercise.filter(:when => Time.now.start_of_year...Time.now.end_of_year).sum(:distance)
-    {:week => week.to_f/1000, :month => month.to_f/1000, :year => year.to_f/1000 }
+    {:week => week, :month => month, :year => year }
   end
 
   def distance=(d)
