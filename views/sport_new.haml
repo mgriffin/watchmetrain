@@ -15,6 +15,6 @@
   %input{:id => "distance", :name => "distance", :type => "text", :value => @exercise.kmdistance, :tabindex => 3}
   %br
   %label{:for => "tags"}Tags
-  %input{:type => "text", :name => "tags", :value => @exercise.tags.map { |t| t.name }.join(', '), :tabindex => 4}
+  %input{:id => "tags", :type => "text", :name => "tags", :value => @exercise.tags.map { |t| t.name }.join(', '), :tabindex => 4}
   %br
   %input{:id => "submit", :type => "submit", :value => "add", :tabindex => 5}

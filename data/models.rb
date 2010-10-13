@@ -77,6 +77,7 @@ class Log < Sequel::Model
 end
 
 class Exercise < Sequel::Model
+  set_dataset dataset.order(:when.desc)
   many_to_many :tags
   
   def self.totals
@@ -86,10 +87,24 @@ class Exercise < Sequel::Model
     {:week => week, :month => month, :year => year }
   end
 
-  def distance=(d)
-    @distance = ChronicDistance.parse(d)
-  end
   def kmdistance
     @distance = ChronicDistance.output(distance, :format => :short, :unit => 'kilometers')
+  end
+  def tag_names=(value)
+    tags.clear
+    tag_names =
+      if value.respond_to?(:to_ary)
+        value.to_ary
+      elsif value.respond_to?(:to_str)
+        value.split(/[\s,]+/)
+      end
+    tag_names.uniq.each do |tag_name|
+      tag = Tag.find_or_create(:name => tag_name)
+      tags << tag
+    end
+  end
+
+  def tag_names
+    tags.collect { |t| t.name }
   end
 end

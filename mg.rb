@@ -53,6 +53,7 @@ end
 get '/sport/new' do
   login_required
   @exercise = Exercise.new
+  @exercise.taken = 0
   haml :sport_new
 end
 get '/sport/:id' do
@@ -68,6 +69,16 @@ post '/sport' do
     else
       Exercise[params[:id].to_i]
     end
+    @exercise.remove_all_tags unless params[:id].empty?
+    @exercise.when = Chronic.parse(params[:when])
+    @exercise.taken = ChronicDuration.parse(params[:taken])
+    @exercise.distance = ChronicDistance.parse(params[:distance])
+    @exercise.tag_names = params[:tags]
+    @exercise.tags.each do |t|
+      @exercise.add_tag(t)
+    end
+    @exercise.save
+    redirect '/'
 end
 
 get '/blog/archive' do

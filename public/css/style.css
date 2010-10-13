@@ -113,20 +113,21 @@ label {
     float: left;
     padding: 4px 2px;
 }
-.input input, textarea, select {
-    float: left;
-    padding: 4px 2px;
-    border: solid 1px #222;
-    width: 400px;
-    margin: 2px 0 20px 10px;
-}
-.input input:focus, textarea:focus, select:focus {
-    border: solid 1px #f60;
-}
 form {
     margin: 0 auto;
     width: 600px;
     padding: 14px;
+}
+#draft input[type=text], #draft textarea {
+    font-size:inherit;
+    text-align:inherit;
+    font-family:inherit;
+    color:inherit;
+    width:100%;
+    border:1px dotted #ddd;
+}
+.unpublished {
+	color: #f60;
 }
 h2 {
     border-bottom: 1px solid #ddd;

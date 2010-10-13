@@ -74,12 +74,12 @@ end
 
 def another_body
   a=<<EOF
-  blah
+blah
 
-  blah
+h3. blah
 
-  lorem ipsum dolor sit amet
-  things
+lorem ipsum dolor sit amet
+things(r)
 EOF
 end
 

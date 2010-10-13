@@ -117,12 +117,12 @@ class Time
   end
   def start_of_week
     days_to_monday = self.wday!=0 ? self.wday-1 : 6
-    result = self - days_to_monday
+    result = self - (days_to_monday * 24 * 60 * 60)
     result.start_of_day
   end
   def end_of_week
     days_to_sunday = self.wday!=0 ? 7-self.wday : 0
-    result = self + days_to_sunday
+    result = self + (days_to_sunday * 24 * 60 * 60)
     result.end_of_day
   end
   def start_of_month
