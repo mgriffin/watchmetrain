@@ -78,7 +78,14 @@ class Fixnum
     ChronicDistance.output(self, :format => :short, :unit => 'kilometers')
   end
 end
-
+class Bignum
+  def to_km
+    if self == 0
+      return "0km"
+    end
+    ChronicDistance.output(self, :format => :short, :unit => 'kilometers')
+  end
+end
 require 'rack'
 
 module Rack

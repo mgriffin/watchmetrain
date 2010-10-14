@@ -75,6 +75,7 @@ post '/sport' do
     @exercise.distance = ChronicDistance.parse(params[:distance])
     @exercise.tag_names = params[:tags]
     @exercise.tags.each do |t|
+      t.name.downcase!
       @exercise.add_tag(t)
     end
     @exercise.save
@@ -144,6 +145,7 @@ end
 
 get '/tags/:tag' do
   @articles = Article.tagged(params[:tag])
+  @exercises = Exercise.tagged(params[:tag])
   @title = "articles tagged with " + params[:tag]
   haml :home
 end

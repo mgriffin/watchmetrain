@@ -42,6 +42,7 @@ class Article < Sequel::Model
         value.split(/[\s,]+/)
       end
     tag_names.uniq.each do |tag_name|
+      tag_name.downcase!
       tag = Tag.find_or_create(:name => tag_name)
       tags << tag
     end
@@ -99,6 +100,7 @@ class Exercise < Sequel::Model
         value.split(/[\s,]+/)
       end
     tag_names.uniq.each do |tag_name|
+      tag_name.downcase!
       tag = Tag.find_or_create(:name => tag_name)
       tags << tag
     end
@@ -106,5 +108,13 @@ class Exercise < Sequel::Model
 
   def tag_names
     tags.collect { |t| t.name }
+  end
+  
+  def self.tagged(tag)
+    if tag = Tag.first(:name => tag)
+      tag.articles
+    else
+      []
+    end
   end
 end
