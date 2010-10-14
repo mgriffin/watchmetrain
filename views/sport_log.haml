@@ -10,6 +10,6 @@
       %tr{ :class => alternate('other', '') }
         %td= short_date(s.when)
         %td 
-          = s.tags.map { |t| t.name }.join(', ')
+          = s.tags.map { |t| "<a href=\"/tags/"+t.name+"\">"+t.name+"</a>" }.join(', ')
         %td= ChronicDistance.output(s.distance, :format => :short, :unit => 'kilometers')
         %td= ChronicDuration.output(s.taken, :format => :short)

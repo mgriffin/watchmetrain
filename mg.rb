@@ -35,6 +35,10 @@ get '/' do
   haml :home
 end
 
+get '/about' do
+  haml :about
+end
+
 get '/week' do
   @sports = Exercise.filter(:when => Time.now.start_of_week...Time.now.end_of_week)
   haml :sport_log
@@ -82,7 +86,7 @@ post '/sport' do
     redirect '/'
 end
 
-get '/blog/archive' do
+get '/blog' do
   if logged_in?
     @articles = Article.order(:publish_date.desc)
   else
@@ -145,9 +149,9 @@ end
 
 get '/tags/:tag' do
   @articles = Article.tagged(params[:tag])
-  @exercises = Exercise.tagged(params[:tag])
+  @sports = Exercise.tagged(params[:tag])
   @title = "articles tagged with " + params[:tag]
-  haml :home
+  haml :view_tag
 end
 
 get '/login' do

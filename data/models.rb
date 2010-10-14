@@ -112,7 +112,7 @@ class Exercise < Sequel::Model
   
   def self.tagged(tag)
     if tag = Tag.first(:name => tag)
-      tag.articles
+      tag.exercises
     else
       []
     end
