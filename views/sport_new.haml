@@ -5,16 +5,19 @@
     &raquo;
 %form{:method => :post, :action => '/sport'}
   %input{:type => "hidden", :name => "id", :value => @exercise.id}
-  %label{:for => "when"}When
-  %input{:id => "when", :name => "when", :type => "text", :value => @exercise.when, :tabindex => 1}
+  %label{:for => "start_time"}When
+  %input{:id => "start_time", :name => "start_time", :type => "text", :value => @exercise.nicetime, :tabindex => 1}
   %br
-  %label{:for => "when"}How long
-  %input{:id => "taken", :name => "taken", :type => "text", :value => ChronicDuration.output(@exercise.taken, :format => :short), :tabindex => 2}
+  %label{:for => "duration"}How long
+  %input{:id => "duration", :name => "duration", :type => "text", :value => ChronicDuration.output(@exercise.duration, :format => :short), :tabindex => 2}
   %br
-  %label{:for => "when"}How far
+  %label{:for => "distance"}How far
   %input{:id => "distance", :name => "distance", :type => "text", :value => @exercise.kmdistance, :tabindex => 3}
   %br
   %label{:for => "tags"}Tags
   %input{:id => "tags", :type => "text", :name => "tags", :value => @exercise.tags.map { |t| t.name }.join(', '), :tabindex => 4}
   %br
-  %input{:id => "submit", :type => "submit", :value => "add", :tabindex => 5}
+  %label{:for => "comment"}Comment
+  %textarea{:id => "comment", :name => "comment", :tabindex => 5}= @exercise.comment
+  %br
+  %input{:id => "submit", :type => "submit", :value => "add", :tabindex => 6}

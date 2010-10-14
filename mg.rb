@@ -40,24 +40,24 @@ get '/about' do
 end
 
 get '/week' do
-  @sports = Exercise.filter(:when => Time.now.start_of_week...Time.now.end_of_week)
+  @sports = Exercise.filter(:start_time => Time.now.start_of_week...Time.now.end_of_week)
   haml :sport_log
 end
 
 get '/month' do
-  @sports = Exercise.filter(:when => Time.now.start_of_month...Time.now.end_of_month)
+  @sports = Exercise.filter(:start_time => Time.now.start_of_month...Time.now.end_of_month)
   haml :sport_log
 end
 
 get '/year' do
-  @sports = Exercise.filter(:when => Time.now.start_of_year...Time.now.end_of_year)
+  @sports = Exercise.filter(:start_time => Time.now.start_of_year...Time.now.end_of_year)
   haml :sport_log
 end
 
 get '/sport/new' do
   login_required
   @exercise = Exercise.new
-  @exercise.taken = 0
+  @exercise.duration = 0
   haml :sport_new
 end
 get '/sport/:id' do
@@ -74,9 +74,10 @@ post '/sport' do
       Exercise[params[:id].to_i]
     end
     @exercise.remove_all_tags unless params[:id].empty?
-    @exercise.when = Chronic.parse(params[:when])
-    @exercise.taken = ChronicDuration.parse(params[:taken])
+    @exercise.start_time = Chronic.parse(params[:start_time])
+    @exercise.duration = ChronicDuration.parse(params[:duration])
     @exercise.distance = ChronicDistance.parse(params[:distance])
+    @exercise.comment = params[:comment]
     @exercise.tag_names = params[:tags]
     @exercise.tags.each do |t|
       t.name.downcase!

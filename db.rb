@@ -48,8 +48,8 @@ end
 if !DB.table_exists?(:exercises)
   DB.create_table! :exercises do
     primary_key :id
-    Time :when
-    Integer :taken
+    Time :start_time
+    Integer :duration
     Integer :distance
     String :comment
   end

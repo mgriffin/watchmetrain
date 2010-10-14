@@ -56,7 +56,7 @@ end
 
 class Tag < Sequel::Model
   many_to_many :articles, :order => :publish_date.desc
-  many_to_many :exercises, :order => :when.desc
+  many_to_many :exercises, :order => :start_time.desc
 end
 
 class User < Sequel::Model
@@ -78,16 +78,21 @@ class Log < Sequel::Model
 end
 
 class Exercise < Sequel::Model
-  set_dataset dataset.order(:when.desc)
+  set_dataset dataset.order(:start_time.desc)
   many_to_many :tags
   
   def self.totals
-    week = Exercise.filter(:when => Time.now.start_of_week...Time.now.end_of_week).sum(:distance) || 0
-    month = Exercise.filter(:when => Time.now.start_of_month...Time.now.end_of_month).sum(:distance)
-    year = Exercise.filter(:when => Time.now.start_of_year...Time.now.end_of_year).sum(:distance)
+    week = Exercise.filter(:start_time => Time.now.start_of_week...Time.now.end_of_week).sum(:distance) || 0
+    month = Exercise.filter(:start_time => Time.now.start_of_month...Time.now.end_of_month).sum(:distance)
+    year = Exercise.filter(:start_time => Time.now.start_of_year...Time.now.end_of_year).sum(:distance)
     {:week => week, :month => month, :year => year }
   end
 
+  def nicetime
+    day,month,date,time,offset,year = start_time.to_s.split
+    day
+  end
+  
   def kmdistance
     @distance = ChronicDistance.output(distance, :format => :short, :unit => 'kilometers')
   end
