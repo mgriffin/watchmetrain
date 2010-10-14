@@ -12,16 +12,12 @@ if !DB.table_exists?(:articles)
     Text :body
     Boolean :published
     Time :publish_date
-    Time :created_at
-    Time :updated_at
   end
  end
  if !DB.table_exists?(:tags) 
   DB.create_table! :tags do 
     primary_key :id
     String :name
-    Time :created_at
-    Time :updated_at
   end
 end
 if !DB.table_exists?(:articles_tags)
