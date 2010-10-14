@@ -1,8 +1,12 @@
-.bloglist
-  %ol
-    -@articles.each do |a|
-      %li
-        %a{:href => '/blog/'+a.slug}= a.title
-        - unless a.published?
-          %span.unpublished [not yet live]
-        %span.blogdate= a.date
+- if logged_in?
+  %p.admin 
+    &laquo; 
+    %a{:href => '/drafts/new', :accesskey => 'n'}New
+    &raquo;
+    &laquo; 
+    %a{:href => '/sport/new', :accesskey => 's'}Sport
+    &raquo;
+~ haml :progress, :layout => :none
+~ haml :home, :layout => :none
+%h3
+  %a{:href => '/blog'}More posts

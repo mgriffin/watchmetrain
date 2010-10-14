@@ -32,7 +32,7 @@ get '/' do
     @articles = Article.filter(:published => true).order(:publish_date.desc).limit(5)
   end
   @totals = Exercise.totals
-  haml :list
+  haml :home
 end
 
 get '/week' do
