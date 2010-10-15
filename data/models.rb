@@ -83,8 +83,8 @@ class Exercise < Sequel::Model
   
   def self.totals
     week = Exercise.filter(:start_time => Time.now.start_of_week...Time.now.end_of_week).sum(:distance) || 0
-    month = Exercise.filter(:start_time => Time.now.start_of_month...Time.now.end_of_month).sum(:distance)
-    year = Exercise.filter(:start_time => Time.now.start_of_year...Time.now.end_of_year).sum(:distance)
+    month = Exercise.filter(:start_time => Time.now.start_of_month...Time.now.end_of_month).sum(:distance) || 0
+    year = Exercise.filter(:start_time => Time.now.start_of_year...Time.now.end_of_year).sum(:distance) || 0
     {:week => week, :month => month, :year => year }
   end
 

@@ -1,13 +1,13 @@
 .total
   %a{:href => '/week'}
     %span.title this week
-    = @totals[:week].to_km
+    = @totals[:week].to_i.to_km
 .total
   %a{:href => '/month'}
     %span.title this month
-    = @totals[:month].to_km
+    = @totals[:month].to_i.to_km
 .total
   %a{:href => '/year'}
     %span.title this year
-    = @totals[:year].to_km
+    = @totals[:year].to_i.to_km
 .clear
