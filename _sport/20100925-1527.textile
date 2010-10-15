@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Training
-time: 0:55:40
-distance: 24330
----
-Cycle with Louise to Ratoath on road bikes

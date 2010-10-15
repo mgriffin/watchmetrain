@@ -1,8 +1,0 @@
----
-tag: Swim
-type: Training
-time: 1500
-distance: 1000
----
-200m warm up
-200;400;200 main set to loosen out sore muscles from gym the day before

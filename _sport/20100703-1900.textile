@@ -1,9 +1,0 @@
----
-tag: Football
-type: Match
-time: 3600
-distance: 0
----
-Away match v Killygarry
-Won 2-14 to 0-6
-Played wing forward

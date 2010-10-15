@@ -1,8 +1,0 @@
----
-tag: Run
-type: Training
-time: 0:41:26
-distance: 9080
----
-run in the Phoenix Park
-<iframe width="425" height="345" src="http://runkeeper.com/activityMap/ah9gu"></iframe>

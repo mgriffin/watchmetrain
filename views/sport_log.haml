@@ -1,0 +1,15 @@
+%table
+  %thead
+    %tr
+      %th when
+      %th what
+      %th how far
+      %th how long
+  %tbody
+    -@sports.each do |s|
+      %tr{ :class => alternate('other', '') }
+        %td= short_date(s.start_time)
+        %td 
+          = s.tags.map { |t| "<a href=\"/tags/"+t.name+"\">"+t.name+"</a>" }.join(', ')
+        %td= ChronicDistance.output(s.distance, :format => :short, :unit => 'kilometers')
+        %td= ChronicDuration.output(s.duration, :format => :short)

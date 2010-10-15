@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 900
-distance: 6000
----
-To work from Ballyfermot

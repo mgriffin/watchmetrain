@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 2640
-distance: 21100
----
-Cycle to Chapelizod with Louise and then on to work. Cold dry morning, felt good.

@@ -1,9 +1,0 @@
----
-tag: Run
-type: Training
-time: 1180
-distance: 4080
----
-A run around the block with Sean. Started off a bit faster than either of us wanted, but calmed down and finished off with stretching.
-
-Some tightness in my calves and shins from the night before. More stretching to be done to minimise this.

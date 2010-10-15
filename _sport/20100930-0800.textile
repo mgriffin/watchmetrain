@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 0:45:00
-distance: 21320
----
-Cycle to work with Louise, had to turn back in Celbridge to get Louise's helmet

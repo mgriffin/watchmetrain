@@ -1,9 +1,0 @@
----
-tag: Football
-type: Match
-time: 3600
-distance: 0
----
-Second Championship match v Munterconnacht
-Won 2-15 to 3-10
-Started at midfield, moved to wing forward in second half and then taken off half way through.

@@ -1,8 +1,0 @@
----
-tag: Run
-type: Training
-time: 1800
-distance: 5000
----
-Gentle jog from Ronan's house. Started with Ronan, John Judge, Sean, Clare, Duff and Louise.
-Ended up with just Ronan and John. Went to Sluice and followed the path around, up the hill and back down by Laraghcon before going through the village and back to Ronan's

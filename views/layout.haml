@@ -1,0 +1,31 @@
+%html
+  %head
+    %title 
+      watchmetrain
+      = " - #{@title}" unless @title.nil?
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  %body
+    #header
+      %h1 
+        %a{:href => "/"}watch me train
+        %span a log and graphs
+      %ol#links
+        %li 
+          %a{:href => '/about'}about
+    #container
+      #content
+        -if flash.has?(:error)
+          %h3.error= flash[:error]
+        -if flash.has?(:notice)
+          %h3.notice= flash[:notice]
+        -if flash.has?(:success)
+          %h3.success= flash[:success]
+        = yield
+    #footer
+      %p.quiet 
+        All training done by 
+        %a{:href => '/about'}Mike Griffin
+        %img{:src => '/images/feed-icon-14x14.png', :alt => 'feed'}
+    -if production?
+      ~ haml :google_analytics, :layout => :none

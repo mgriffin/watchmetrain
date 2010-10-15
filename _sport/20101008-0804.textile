@@ -1,8 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 0:43:24
-distance: 20360
----
-Cycle to work with Louise, windy day.
-New drivetrain fitted on the road bike last night so testing it out

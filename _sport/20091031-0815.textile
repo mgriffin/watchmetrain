@@ -1,6 +1,0 @@
----
-tag: Cycle
-type: Training
-time: 19800
-distance: 115000
----

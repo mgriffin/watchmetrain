@@ -1,7 +1,0 @@
----
-tag: Run
-type: Commute
-time: 1489
-distance: 5680
----
-<iframe width="425" height="345" src="http://runkeeper.com/pub/act/GcplYTd42LyYsLWTbnfh/map"></iframe>

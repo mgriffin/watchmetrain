@@ -1,7 +1,0 @@
----
-tag: Run
-type: Training
-time: 0:41:26
-distance: 6400
----
-run in the Phoenix Park with the rest of them

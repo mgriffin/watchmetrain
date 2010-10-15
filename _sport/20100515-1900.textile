@@ -1,9 +1,0 @@
----
-tag: Football
-type: Match
-time: 3600
-distance: 0
----
-Match at home against Kildallen. Played as defensive midfielder. Sprained finger from training the night before had to be strapped up. This made catching the ball difficult and sore.
-
-Won 5-10 to 2-8

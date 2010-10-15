@@ -1,0 +1,16 @@
+%table
+  %thead
+    %tr
+      %td Path
+      %td User Agent
+      %td IP
+      %td referer
+      %td date
+  -@logs.each do |l|
+    %tr
+      %td= l.path
+      %td= l.user_agent
+      %td= l.ip
+      %td= l.referer
+      %td= short_date(l.date)
+  

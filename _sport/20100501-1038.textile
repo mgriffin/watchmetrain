@@ -1,9 +1,0 @@
----
-tag: Cycle
-type: Training
-time: 4560
-distance: 38220
----
-Loop from Celbridge through Clane and back through Kilcock and Maynooth.
-
-<iframe width="425" height="345" src="http://runkeeper.com/pub/act/sHIbKiKkjXPDvJHcSDJd/map"></iframe>

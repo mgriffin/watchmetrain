@@ -1,7 +1,0 @@
----
-tag: Football
-type: Training
-time: 2700
-distance: 0
----
-Just a 9 a side warm up match to keep us limber

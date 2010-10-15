@@ -1,6 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 0:42:00
-distance: 20320
----

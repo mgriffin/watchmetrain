@@ -1,9 +1,0 @@
----
-tag: Swim
-type: Training
-time: 2700
-distance: 1800
----
-300 warm up
-12x 100m
-300 cool down

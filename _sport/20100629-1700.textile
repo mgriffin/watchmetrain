@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 2520
-distance: 20230
----
-Work to home. Slight headwind.

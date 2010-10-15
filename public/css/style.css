@@ -1,0 +1,169 @@
+body {
+    color: #444;
+}
+img {
+    border: 0;
+}
+#header {
+	height: 100px;
+	border-bottom: 2px solid #222;
+	padding-left: 15px;
+    background: url('/images/header_bg.png') bottom right no-repeat #fff;
+}
+a {
+	color: #444;
+    text-decoration: none;
+}
+a:hover {
+    color: #f60;
+}
+h1 a {
+    text-decoration: underline;
+}
+#header span {
+	display: block;
+	font-size: 0.5em;
+	padding: 0 15px 5px 15px;
+}
+#footer {
+	height: 100px;
+	border-top: 2px solid #222;
+	text-align: right;
+	padding: 5px 15px 0 0;
+    background: url('/images/footer_bg.png') no-repeat #fff;
+}
+#container {
+	border-top: 1px solid #f60;
+	border-bottom: 1px solid #f60;
+	padding: 15px 20px;
+}
+#content {
+	width: 690px;
+	margin: 0 auto;
+}
+#content a {
+    text-decoration: underline;
+}
+thead th {
+	font-size: 1.25em;
+	border-bottom: 1px solid #222;
+	background: #fff;
+}
+tr.other {
+	background: #ddd;
+}
+tbody tr:hover {
+	background: #a65;
+	color: #ddd;
+    cursor: pointer;
+}
+.total {
+    float: left;
+    font-size: 3em;
+    width: 200px;
+    text-align: center;
+}
+.total a, #contact_me a {
+    display: block;
+}
+.title {
+    display: block;
+    font-size: 0.5em;
+    margin-bottom: -15px;
+}
+.clear {
+    clear: both;
+}
+.bloglist {
+    padding-top: 15px;
+}
+.bloglist ol {
+    list-style: none;
+}
+.bloglist ol li {
+    font-size: 1.5em;
+}
+.bloglist .blogdate {
+    color: #999;
+    padding-left: 10px;
+    font-size: 0.75em;
+}
+.bloglist a:hover {
+    color: #f60;
+}
+.message {
+    padding: .8em;
+    margin-bottom: 1em;
+    border: 2px solid #c2fbc4;
+    background: #e3fbe4;
+    color: #1f8a11;
+}
+.error {
+    padding: .8em;
+    margin-bottom: 1em;
+    border: 2px solid #fbc2c4;
+    background: #fbe3e4;
+    color: #8a1f11;
+}
+label {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    width: 140px;
+    float: left;
+    padding: 4px 2px;
+}
+form {
+    margin: 0 auto;
+    width: 600px;
+    padding: 14px;
+}
+#draft input[type=text], #draft textarea {
+    font-size:inherit;
+    text-align:inherit;
+    font-family:inherit;
+    color:inherit;
+    width:100%;
+    border:1px dotted #ddd;
+}
+.unpublished {
+	color: #f60;
+}
+h2 {
+    border-bottom: 1px solid #ddd;
+}
+hr {
+    border: 1px solid #ddd;
+}
+#contact_me {
+    width: 200px;
+    float: right;
+    margin-left: 20px;
+}
+#about {
+    float: left;
+    width: 400px;
+}
+ol#links {
+    float: left;
+}
+ol#links li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+ol#links li a:hover {
+    color: #f60;
+}
+ul {
+    list-style-type: none;
+}
+ul li a {
+    color: #444;
+}
+ul li a:hover {
+    color: #f60;
+}
+a.prev, a.next {
+    width: 50px;
+}

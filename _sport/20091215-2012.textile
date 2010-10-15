@@ -1,6 +1,0 @@
----
-tag: Run
-type: Training
-time: 1831
-distance: 5520
----

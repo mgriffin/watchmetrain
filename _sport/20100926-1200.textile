@@ -1,8 +1,0 @@
----
-tag: Cycle
-type: Training
-time: 2:00:00
-distance: 20000
----
-MTB cycle with Waggers and Greg around Howth
-Time and distance are approximate
