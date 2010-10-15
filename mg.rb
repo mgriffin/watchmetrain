@@ -133,7 +133,6 @@ post '/drafts' do
   @article.remove_all_tags unless params[:id].empty?
   @article.title = params[:title]
   @article.body = params[:body]
-  @article.slug = slug(params[:title])
   @article.tag_names = params[:tags]
   @article.publish_date = Time.new unless !@article.publish_date.nil?
   if params[:submit] == "publish"
@@ -143,6 +142,7 @@ post '/drafts' do
   @article.tags.each do |t|
     @article.add_tag(t)
   end
+  @article.slug = slug(params[:title], @article.publish_date)
   @article.save
   redirect '/blog/'+@article.slug
 end

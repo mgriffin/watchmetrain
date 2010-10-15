@@ -11,10 +11,10 @@ helpers do
     date.strftime("%A, #{date.day.ordinalize} of %B, %Y")
   end
   
-  def slug(title)
+  def slug(title, date)
     slug = title.strip.downcase.gsub(/[^a-z0-9 ]/, '')
     slug.gsub!(/ /, '-')
-    Date.today.strftime("%Y%m%d") + '-' + slug
+    date.strftime("%Y%m%d") + '-' + slug
   end
   
   def alternate(str1 = "odd", str2 = "even")
