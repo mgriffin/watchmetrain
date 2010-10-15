@@ -36,21 +36,25 @@ get '/' do
 end
 
 get '/about' do
+  @title = "about me"
   haml :about
 end
 
 get '/week' do
   @sports = Exercise.filter(:start_time => Time.now.start_of_week...Time.now.end_of_week)
+  @title = "week"
   haml :sport_log
 end
 
 get '/month' do
   @sports = Exercise.filter(:start_time => Time.now.start_of_month...Time.now.end_of_month)
+  @title = "month"
   haml :sport_log
 end
 
 get '/year' do
   @sports = Exercise.filter(:start_time => Time.now.start_of_year...Time.now.end_of_year)
+  @title = "year"
   haml :sport_log
 end
 
@@ -93,6 +97,7 @@ get '/blog' do
   else
     @articles = Article.filter(:published => true).order(:publish_date.desc)
   end
+  @title = "archive"
   haml :archive
 end
 
@@ -156,7 +161,7 @@ get '/tags/:tag' do
 end
 
 get '/login' do
-  @title = "login"
+  @title = "log in"
   haml :login
 end
 post '/login' do
@@ -186,9 +191,13 @@ end
 get '/sitemap.xml' do
   articles = Article.filter(:published => true).order(:publish_date.desc)
   tags = Tag.all
-  map = XmlSitemap::Map.new('mikegriffin.ie') do |m|
+  map = XmlSitemap::Map.new('watchmetrain.net') do |m|
     m.add(:url => '/', :period => :daily)
-    m.add(:url => '/blog/archive', :period => :daily)
+    m.add(:url => '/week', :period => :daily)
+    m.add(:url => '/month', :period => :daily)
+    m.add(:url => '/year', :period => :daily)
+    m.add(:url => '/blog', :period => :daily)
+    m.add(:url => '/about')
     articles.each do |a|
       m.add(
         :url => '/blog/'+a.slug,
