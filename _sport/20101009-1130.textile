@@ -1,7 +1,0 @@
----
-tag: Run
-type: Training
-time: 0:25:00
-distance: 5600
----
-Run with Pauline around the football pitch. 8 laps or so

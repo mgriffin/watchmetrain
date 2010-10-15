@@ -1,8 +1,0 @@
----
-tag: Cycle
-type: Training
-time: 4:08:00
-distance: 111190
----
-Cycle with Louise and Waggers to Athy and back.
-Tailwind on the way out, headwind on the way back.

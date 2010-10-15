@@ -1,8 +1,0 @@
----
-tag: Swim
-type: Training
-time: 0:40:00
-distance: 1200
----
-400m warm up, 2x400m swim set.
-All easy, felt good, but slow
