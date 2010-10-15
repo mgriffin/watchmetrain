@@ -1,6 +1,0 @@
----
-tag: Run
-type: Race
-time: 17280
-distance: 45061
----

@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 2580
-distance: 19940
----
-Cycling home from work, felt tired. I guess I'm not over the jet lag yet. Rest tomorrow to recover.

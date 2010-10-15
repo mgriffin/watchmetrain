@@ -1,7 +1,0 @@
----
-tag: cycle
-type: commute
-time: 0:45:00
-distance: 20340
----
-Rainy with a head wind

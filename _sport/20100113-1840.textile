@@ -1,7 +1,0 @@
----
-tag: Swim
-type: Training
-time: 1200
-distance: 1200
----
-100m, 200m, 300m, 400m, 2x100m technique

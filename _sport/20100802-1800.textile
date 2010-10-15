@@ -1,7 +1,0 @@
----
-tag: Run
-type: Training
-time: 2312
-distance: 5560
----
-Run in Donadea with Louise. Very easy pace

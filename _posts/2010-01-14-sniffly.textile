@@ -1,9 +1,0 @@
----
-layout: post
-title: Sniffly
----
-h2. {{ page.title }}
-
-Thursday, 14th January, 2010
-
-I caught me a head cold today. I've been sniffling all day and have a bit of a scratchy throat. It feels like the glands on the right hand side of my neck are swollen as well. It should be gone by tomorrow, just in time for football training to start up again at the weekend.

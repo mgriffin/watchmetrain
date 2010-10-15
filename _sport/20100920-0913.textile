@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 0:36:00
-distance: 20290
----
-I had a good wind behind me this morning

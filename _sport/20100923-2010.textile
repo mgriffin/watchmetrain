@@ -1,7 +1,0 @@
----
-tag: Run
-type: Training
-time: 0:24:00
-distance: 3800
----
-Run from Duff's house in a loop through Drumcondra and back along Richmond Rd

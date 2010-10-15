@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 0:40:00
-distance: 20290
----
-Very very wet cycle home from work. And windy too

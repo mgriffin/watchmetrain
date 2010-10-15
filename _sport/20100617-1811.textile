@@ -1,9 +1,0 @@
----
-tag: Run
-type: Training
-time: 3780
-distance: 15330
----
-Run in Castlebar from the hotel to Turlough Park and back again. 30:36 out and 32:27 back. Stopped a couple of times on the way back to fix my earphones.
-
-Humid and warm, but dry.

@@ -1,9 +1,0 @@
----
-tag: Football
-type: Match
-time: 3600
-distance: 0
----
-Home match v Mountnugent
-lost 1-10 to 3-9
-played wing forward

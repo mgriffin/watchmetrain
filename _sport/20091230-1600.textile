@@ -1,6 +1,0 @@
----
-tag: Swim
-type: Training
-time: 3600
-distance: 800
----

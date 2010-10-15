@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 720
-distance: 5660
----
-From Ballyfermot to work on the tri bike.

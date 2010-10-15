@@ -1,9 +1,0 @@
----
-tag: Football
-type: Match
-time: 3600
-distance: 0
----
-Championship Semi Final v Munterconnacht
-Lost 1-11 to 1-17
-Played at wing forward. 

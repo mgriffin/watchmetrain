@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 0:44:00
-distance: 19980
----
-Cycle to work with Louise on the fixie

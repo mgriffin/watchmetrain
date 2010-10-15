@@ -1,9 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 2660
-distance: 19910
----
-First cycle to work after coming back from honeymoon.
-
-<iframe width="425" height="345" src="http://runkeeper.com/pub/act/BSk8gky4ag0olNsV0CXr/map"></iframe>

@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Training
-time: 1800
-distance: 16000
----
-From work to the Papal Cross. Three laps of the duathlon course with a large group from Belpark. Took it easy enough.

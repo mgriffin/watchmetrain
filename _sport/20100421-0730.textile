@@ -1,7 +1,0 @@
----
-tag: Cycle
-type: Commute
-time: 2700
-distance: 20150
----
-Cycle to Chapelizod with Louise as her first cycle to work from Celbridge. Then continued to work from there.

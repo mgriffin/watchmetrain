@@ -1,9 +1,0 @@
----
-tag: Run
-type: Training
-time: 0:33:57
-distance: 5970
----
-Running with Louise and Sean around the Castletown loop in five fingers.
-Felt good, no calf pain.
-Weather was cool with a little bit of drizzle

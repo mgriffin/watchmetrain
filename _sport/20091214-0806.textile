@@ -1,6 +1,0 @@
----
-tag: Run
-type: Commute
-time: 4019
-distance: 12620
----
