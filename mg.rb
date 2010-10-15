@@ -217,6 +217,30 @@ get '/sitemap.xml' do
   map.render
 end
 
+get '/feed.xml' do
+  @articles = Article.filter(:published => true).order(:publish_date.desc).limit(10)
+  builder do |xml|
+    xml.instruct! :xml, :version => '1.0'
+    xml.rss :version => "2.0" do
+      xml.channel do
+        xml.title "watchmetrain"
+        xml.description "a log and graphs"
+        xml.link "http://watchmetrain.net/"
+
+        @articles.each do |a|
+          xml.item do
+            xml.title a.title
+            xml.link "http://watchmetrain.net/blog/#{a.slug}"
+            xml.description a.html_body
+            xml.pubDate Time.parse(a.date.to_s).rfc822()
+            xml.guid "http://watchmetrain.net/blog/#{a.slug}"
+          end
+        end
+      end
+    end
+  end
+end
+
 get '/logs' do
   login_required
   @title = "the logs"
