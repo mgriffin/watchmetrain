@@ -1,9 +1,12 @@
 h2. "http://watchmetrain.net":http://watchmetrain.net
 
-This is the raw source to my site at "http://watchmetrain.net":http://watchmetrain.net
+A site to track my training over the long term so that I can get some stats.
 
-I've taken a lot of inspiration from "Michael Montelone's site":http://michaelmonteleone.net/ with the code that he used to create his site. The Rakefile was originally lifted from him.
+Now running on "sinatra":http://www.sinatrarb.com/ with a few extra gems to make life easier.
 
-Feel free to browse around and see what I've done.
-
-Don't take things from @_posts/@ or @images/@. Otherwise it's all fair game, but don't just do a complete site copy, please.
+  * redcloth - for textile conversion
+  * rack-flash - to show messages when I'm logged in
+  * xml-sitemap - to create a nice sitemap
+  * chronic - easier date parsing
+  * chronic_duration - nice time differences
+  * chronic_distance - outputs the distances
