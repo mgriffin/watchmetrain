@@ -117,7 +117,7 @@ end
 
 class Time
   def start_of_day
-    change(:hour => 0)
+    change(:hour => 0, :min => 0, :sec => 0)
   end
   def end_of_day
     change(:hour => 23, :min => 59, :sec => 59)
@@ -133,7 +133,7 @@ class Time
     result.end_of_day
   end
   def start_of_month
-    change(:day => 1)
+    change(:day => 1, :hour => 0, :min => 0, :sec => 0)
   end
   def end_of_month
     #self - ((self.mday-1).days + self.seconds_since_midnight)
