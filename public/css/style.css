@@ -129,7 +129,7 @@ form {
 .unpublished {
 	color: #f60;
 }
-h2 {
+h2, h4 {
     border-bottom: 1px solid #ddd;
 }
 hr {
