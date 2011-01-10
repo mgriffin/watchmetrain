@@ -40,6 +40,18 @@ get '/about' do
   haml :about
 end
 
+get '/archive' do
+  @years = Exercise.years
+  @title = "archive"
+  haml :archive
+end
+
+get '/archive/:year' do
+  @totals = Exercise.month_totals(params[:year])
+  @title = params[:year]
+  haml :archive_year
+end
+
 get '/week' do
   @sports = Exercise.filter(:start_time => Time.now.start_of_week...Time.now.end_of_week)
   @title = "week"
@@ -98,7 +110,7 @@ get '/blog' do
     @articles = Article.filter(:published => true).order(:publish_date.desc)
   end
   @title = "archive"
-  haml :archive
+  haml :blog
 end
 
 get '/blog/:slug' do

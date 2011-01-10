@@ -96,6 +96,27 @@ class Exercise < Sequel::Model
   def kmdistance
     @distance = ChronicDistance.output(distance, :format => :short, :unit => 'kilometers')
   end
+  
+  def self.years
+    years = []
+    @temp = Exercise.select(:start_time)
+    @temp.each do |t|
+      d, m, dd, t, o, y = t[:start_time].to_s.split
+      years << y
+    end
+    years.sort!.uniq!
+  end
+  
+  def self.month_totals(year)
+    totals = []
+    (1..12).each do |month|
+      the_date = Time.utc(year.to_i, month)
+      narf = Exercise.filter(:start_time => the_date.start_of_month...the_date.end_of_month).sum(:distance) || 0
+      totals << narf.to_i.to_km
+    end
+    totals
+  end
+  
   def tag_names=(value)
     tags.clear
     tag_names =
