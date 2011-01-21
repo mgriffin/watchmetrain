@@ -52,6 +52,7 @@ if !DB.table_exists?(:exercises)
     Integer :duration
     Integer :distance
     String :comment
+    Boolean :deleted
   end
 end
 if !DB.table_exists?(:exercises_tags)

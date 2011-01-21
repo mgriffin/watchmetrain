@@ -1,5 +1,10 @@
+- if logged_in?
+  %p.admin 
+    &laquo; 
+    %a{:href => '/delete/'+@exercise.id.to_s, :accesskey => 'd'}Delete
+    &raquo;
 %h2
-  = short_date(@exercise.start_time)
+  = long_date(@exercise.start_time)
 = @exercise.tags.map { |t| "<a href=\"/tags/"+t.name+"\">"+t.name+"</a>" }.join(', ')
 %p
   = ChronicDistance.output(@exercise.distance, :format => :long, :unit => 'kilometers')

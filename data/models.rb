@@ -78,7 +78,8 @@ class Log < Sequel::Model
 end
 
 class Exercise < Sequel::Model
-  set_dataset dataset.order(:start_time.desc)
+  #set_dataset dataset.order(:start_time.desc)
+  set_dataset dataset.filter(~{:deleted => true}).order(:start_time.desc)
   many_to_many :tags
   
   def self.totals
@@ -142,5 +143,9 @@ class Exercise < Sequel::Model
     else
       []
     end
+  end
+  
+  def self.delete(id)
+    Exercise.filter(:id => id).update(:deleted => true)
   end
 end

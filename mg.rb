@@ -69,6 +69,11 @@ get '/year' do
   @title = "year"
   haml :sport_log
 end
+get '/detail/:id' do
+  @exercise = Exercise.first(:id => params[:id])
+  @title = "Details for " + short_date(@exercise.start_time)
+  haml :detail
+end
 
 get '/sport/new' do
   login_required
@@ -102,10 +107,15 @@ post '/sport' do
     @exercise.save
     redirect '/'
 end
-get '/detail/:id' do
-  @exercise = Exercise.first(:id => params[:id])
-  @title = "Details for " + short_date(@exercise.start_time)
-  haml :detail
+get '/delete/:id' do
+  login_required
+  if params[:id].empty?
+    flash[:error] = "you're being naughty"
+    redirect '/'
+  end
+  Exercise.delete(params[:id])
+  flash[:success] = "exercise deleted"
+  redirect '/'
 end
 
 get '/blog' do
