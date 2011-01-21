@@ -8,7 +8,8 @@
   %tbody
     -@sports.each do |s|
       %tr{ :class => alternate('other', '') }
-        %td= short_date(s.start_time)
+        %td
+          %a{:href => "/detail/"+s.id.to_s}= short_date(s.start_time)
         %td 
           = s.tags.map { |t| "<a href=\"/tags/"+t.name+"\">"+t.name+"</a>" }.join(', ')
         %td= ChronicDistance.output(s.distance, :format => :short, :unit => 'kilometers')

@@ -55,7 +55,6 @@ tr.other {
 tbody tr:hover {
 	background: #a65;
 	color: #ddd;
-    cursor: pointer;
 }
 .total {
     float: left;

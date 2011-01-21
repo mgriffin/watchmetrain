@@ -102,6 +102,11 @@ post '/sport' do
     @exercise.save
     redirect '/'
 end
+get '/detail/:id' do
+  @exercise = Exercise.first(:id => params[:id])
+  @title = "Details for " + short_date(@exercise.start_time)
+  haml :detail
+end
 
 get '/blog' do
   if logged_in?

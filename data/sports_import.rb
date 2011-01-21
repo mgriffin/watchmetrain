@@ -424,6 +424,9 @@ Tailwind on the way out, headwind on the way back.
 DB[:exercises].insert(:start_time => "2010-10-12 17:20", :duration => "2400", :distance => "1200000", :comment => "400m warm up, 2x400m swim set.
 All easy, felt good, but slow
 ")
+DB[:exercises].insert(:start_time => "2011-01-12 17:20", :duration => "2400", :distance => "1200000", :comment => "400m warm up, 2x400m swim set.
+All easy, felt good, but slow
+")
 DB[:tags].insert(:name => "run")
 DB[:tags].insert(:name => "training")
 DB[:tags].insert(:name => "race")
@@ -881,3 +884,5 @@ DB[:exercises_tags].insert(:exercise_id => 223, :tag_id => 4)
 DB[:exercises_tags].insert(:exercise_id => 223, :tag_id => 2)
 DB[:exercises_tags].insert(:exercise_id => 224, :tag_id => 6)
 DB[:exercises_tags].insert(:exercise_id => 224, :tag_id => 2)
+DB[:exercises_tags].insert(:exercise_id => 225, :tag_id => 6)
+DB[:exercises_tags].insert(:exercise_id => 225, :tag_id => 2)

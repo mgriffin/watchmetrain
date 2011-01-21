@@ -1,0 +1,8 @@
+%h2
+  = short_date(@exercise.start_time)
+= @exercise.tags.map { |t| "<a href=\"/tags/"+t.name+"\">"+t.name+"</a>" }.join(', ')
+%p
+  = ChronicDistance.output(@exercise.distance, :format => :long, :unit => 'kilometers')
+  in
+  = ChronicDuration.output(@exercise.duration, :format => :long)
+%p= @exercise.comment
