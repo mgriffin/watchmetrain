@@ -166,3 +166,10 @@ ul li a:hover {
 a.prev, a.next {
     width: 50px;
 }
+#convert label {
+  display: inline;
+  float: none;
+}
+#convert input {
+  width: 4em;
+}

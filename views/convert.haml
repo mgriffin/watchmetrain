@@ -1,0 +1,35 @@
+%form{:id => 'convert'}
+  %fieldset
+    %legend Distances
+    %input{:type => 'text', :name => 'km', :id => 'km'}
+    %label{:for => 'km'} kms
+    \=
+    %input{:type => 'text', :name => 'mile', :id => 'mile'}
+    %label{:for => 'mile'} miles
+  %fieldset
+    %legend Speeds
+    %input{:type => 'text', :name => 'kmph', :id => 'kmph'}
+    %label{:for => 'kmph'} km/h
+    %br
+    %input{:type => 'text', :name => 'mph', :id => 'mph'}
+    %label{:for => 'mph'} mph
+    %br
+    %input{:type => 'text', :name => 'minperkm', :id => 'minperkm'}
+    %label{:for => 'minperkm'} min/km
+    %br
+    %input{:type => 'text', :name => 'minpermile', :id => 'minpermile'}
+    %label{:for => 'minpermile'} min/mile
+  %fieldset
+    %legend Race times
+    %table
+      %tr
+        %td Marathon
+        %td#marathon
+      %tr
+        %td Half Marathon
+        %td#halfmarathon
+      %tr
+        %td 10K
+        %td#10k
+%script{:type => "application/x-javascript", :src => "/javascript/jquery-1.5.min.js"}
+%script{:type => "application/x-javascript", :src => "/javascript/application.js"}

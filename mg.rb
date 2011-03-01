@@ -210,6 +210,10 @@ get '/404' do
   status 404
 end
 
+get '/convert' do
+  haml :convert
+end
+
 not_found do
   @title = '404'
   haml :'404', :layout => :plain
