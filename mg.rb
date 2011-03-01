@@ -229,6 +229,7 @@ get '/sitemap.xml' do
     m.add(:url => '/year', :period => :daily)
     m.add(:url => '/blog', :period => :daily)
     m.add(:url => '/about')
+    m.add(:url => '/convert')
     articles.each do |a|
       m.add(
         :url => '/blog/'+a.slug,
