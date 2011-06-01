@@ -1,0 +1,11 @@
+source :rubygems
+gem 'sinatra', '=1.0'
+gem 'RedCloth'
+gem 'rack-flash'
+gem 'xml-sitemap'
+gem 'sequel'
+gem 'sqlite3'
+gem 'haml'
+gem 'chronic'
+gem 'chronic_duration'
+gem 'chronic_distance'

@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'sinatra'
-require 'sinatra/reloader' if development?
 require 'redcloth'
 require 'digest/sha1'
 require 'rack-flash'
