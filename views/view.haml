@@ -7,6 +7,8 @@
   = @article.title
   - unless @article.published?
     %span.unpublished [not yet live]
+  ~ haml :google_plusone, :layout => false
+  ~ haml :tweet_me, :layout => false
 .date= @article.date
 .article= @article.html_body
 .tags 
