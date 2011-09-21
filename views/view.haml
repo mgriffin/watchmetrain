@@ -17,3 +17,4 @@
     = @article.tags.map { |t| "<a href=\"/tags/"+t.name+"\">"+t.name+"</a>" }.join(', ')
   -else
     No tags for this post
+~ haml :disqus_comments, :layout => false
