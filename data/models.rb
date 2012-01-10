@@ -113,7 +113,7 @@ class Exercise < Sequel::Model
     (1..12).each do |month|
       the_date = Time.utc(year.to_i, month)
       narf = Exercise.filter(:start_time => the_date.start_of_month...the_date.end_of_month).sum(:distance) || 0
-      totals << narf.to_i.to_km
+      totals << narf.to_i.div(1000000)
     end
     totals
   end
