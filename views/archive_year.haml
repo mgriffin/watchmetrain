@@ -1,6 +1,6 @@
 %table
   -@totals.each_with_index do |t, i|
-    %tr
+    %tr{ :class => alternate('other', '') }
       %td
         %a{:href => "/archive/#{@title}/#{i+1}"}= Date::MONTHNAMES[i+1]
       %td
