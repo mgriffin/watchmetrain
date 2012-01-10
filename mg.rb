@@ -291,3 +291,7 @@ graph "Monthly", {:prefix => '/graphs/:year'} do
   line "km", Exercise.month_totals(params[:year])
 end
 
+graph "Yearly", {:prefix => '/graphs'} do
+  line "km", Exercise.year_totals
+end
+

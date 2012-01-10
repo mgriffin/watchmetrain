@@ -100,12 +100,19 @@ class Exercise < Sequel::Model
   
   def self.years
     years = []
+    years_and_totals = []
     @temp = Exercise.select(:start_time)
     @temp.each do |t|
       d, m, dd, t, o, y = t[:start_time].to_s.split
       years << y
     end
     years.sort!.uniq!
+    years.each do |y|
+      year = Time.mktime(y)
+      total = Exercise.filter(:start_time => year.start_of_year...year.end_of_year).sum(:distance).to_i.div(1000000) || 0
+      years_and_totals << {:year => y, :total => total}
+    end
+    years_and_totals
   end
   
   def self.month_totals(year)
@@ -113,6 +120,17 @@ class Exercise < Sequel::Model
     (1..12).each do |month|
       the_date = Time.utc(year.to_i, month)
       narf = Exercise.filter(:start_time => the_date.start_of_month...the_date.end_of_month).sum(:distance) || 0
+      totals << narf.to_i.div(1000000)
+    end
+    totals
+  end
+
+  def self.year_totals
+    totals = []
+    this_year = Time.new.year
+    (2008..this_year).each do |year|
+      the_date = Time.utc(year)
+      narf = Exercise.filter(:start_time => the_date.start_of_year...the_date.end_of_year).sum(:distance) || 0
       totals << narf.to_i.div(1000000)
     end
     totals

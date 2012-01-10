@@ -1,4 +1,8 @@
-%ul
--@years.each do |y|
-  %li
-    %a{:href => '/archive/'+y}= y
+%table
+  -@years.each do |y|
+    %tr{ :class => alternate('other', '') }
+      %td
+        %a{:href => "/archive/#{y[:year]}"}= y[:year]
+      %td
+        #{y[:total]}km
+%img{:src => "/graphs/yearly.svg", :height => 400, :width => 600}
