@@ -10,6 +10,7 @@ require 'chronic_distance'
 
 require 'db'
 require 'helper'
+require 'graph'
 
 enable :sessions
 use Rack::Flash
@@ -49,6 +50,13 @@ get '/archive/:year' do
   @totals = Exercise.month_totals(params[:year])
   @title = params[:year]
   haml :archive_year
+end
+
+get '/archive/:year/:month' do
+  the_date = Time.mktime(params[:year], params[:month])
+  @sports = Exercise.filter(:start_time => the_date.start_of_month...the_date.end_of_month)
+  @title = "month"
+  haml :sport_log
 end
 
 get '/week' do
@@ -278,3 +286,8 @@ get '/logs' do
   @logs = Log.all
   haml :logs
 end
+
+graph "Monthly", {:prefix => '/graphs/:year'} do
+  line "km", Exercise.month_totals(params[:year])
+end
+
