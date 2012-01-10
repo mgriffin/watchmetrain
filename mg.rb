@@ -55,7 +55,7 @@ end
 get '/archive/:year/:month' do
   the_date = Time.mktime(params[:year], params[:month])
   @sports = Exercise.filter(:start_time => the_date.start_of_month...the_date.end_of_month)
-  @title = "month"
+  @title = "#{Date::MONTHNAMES[params[:month].to_i]} #{params[:year]}"
   haml :sport_log
 end
 
