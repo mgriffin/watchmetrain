@@ -18,6 +18,9 @@
           %a{:href => '/archive'}archive
           |
           %a{:href => '/convert'}convert
+          - if logged_in?
+            |
+            %a{:href => '/logs'}logs
     #container
       #content
         -if flash.has?(:error)
