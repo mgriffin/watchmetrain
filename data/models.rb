@@ -108,9 +108,12 @@ class Exercise < Sequel::Model
     end
     years.sort!.uniq!
     years.each do |y|
-      year = Time.mktime(y)
-      total = Exercise.filter(:start_time => year.start_of_year...year.end_of_year).sum(:distance).to_i.div(1000000) || 0
-      years_and_totals << {:year => y, :total => total}
+      if y.nil?
+      else
+        year = Time.mktime(y)
+        total = Exercise.filter(:start_time => year.start_of_year...year.end_of_year).sum(:distance).to_i.div(1000000) || 0
+        years_and_totals << {:year => y, :total => total}
+      end
     end
     years_and_totals
   end
