@@ -1,7 +1,6 @@
 source :rubygems
-gem 'sinatra', '=1.0'
+gem 'sinatra'
 gem 'RedCloth'
-gem 'rack-flash'
 gem 'xml-sitemap'
 gem 'sequel'
 gem 'sqlite3'

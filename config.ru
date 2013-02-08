@@ -8,6 +8,6 @@ set :environment, :production
 enable :show_exceptions
 disable :run, :reload
 
-require 'mg'
+require './mg'
 
 run Sinatra::Application
