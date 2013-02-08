@@ -23,12 +23,6 @@
             %a{:href => '/logs'}logs
     #container
       #content
-        -if flash.has?(:error)
-          %h3.error= flash[:error]
-        -if flash.has?(:notice)
-          %h3.notice= flash[:notice]
-        -if flash.has?(:success)
-          %h3.success= flash[:success]
         = yield
     #footer
       %p.quiet 

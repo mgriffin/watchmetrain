@@ -2,28 +2,26 @@ require 'rubygems'
 require 'sinatra'
 require 'redcloth'
 require 'digest/sha1'
-require 'rack-flash'
 require 'xml-sitemap'
 require 'chronic'
 require 'chronic_duration'
 require 'chronic_distance'
 
-require 'db'
-require 'helper'
-require 'graph'
+require './db'
+require './helper'
+require './graph'
 
 enable :sessions
-use Rack::Flash
 
-except_before(['/drafts/*', '/logs']) do
-  l = Log.new
-  l.path = request.fullpath
-  l.user_agent = request.user_agent
-  l.ip = request.remote_ip
-  l.referer = request.referer
-  l.date = Time.new
-  l.save
-end
+#except_before(['/drafts/*', '/logs']) do
+#  l = Log.new
+#  l.path = request.fullpath
+#  l.user_agent = request.user_agent
+#  l.ip = request.remote_ip
+#  l.referer = request.referer
+#  l.date = Time.new
+#  l.save
+#end
 
 get '/' do
   if logged_in?
@@ -117,11 +115,11 @@ end
 get '/delete/:id' do
   login_required
   if params[:id].empty?
-    flash[:error] = "you're being naughty"
+    #flash[:error] = "you're being naughty"
     redirect '/'
   end
   Exercise.delete(params[:id])
-  flash[:success] = "exercise deleted"
+  #flash[:success] = "exercise deleted"
   redirect '/'
 end
 
@@ -201,7 +199,7 @@ end
 post '/login' do
   if u = User.authenticate(params[:username], params[:password])
     session[:user] = u.id
-    flash[:success] = "logged in"
+    #flash[:success] = "logged in"
     redirect_to_stored
   else
     redirect '/login'
@@ -209,7 +207,7 @@ post '/login' do
 end
 get '/logout' do
   session[:user] = nil
-  flash[:success] = "logged out"
+  #flash[:success] = "logged out"
   redirect '/'
 end
 

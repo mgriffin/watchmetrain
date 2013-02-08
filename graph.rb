@@ -51,7 +51,7 @@ module Sinatra
 
     def renderer(option)
       case option
-        when 'pie': Scruffy::Renderers::Pie.new
+        when 'pie' then Scruffy::Renderers::Pie.new
         else Scruffy::Renderers::Standard.new
       end
     end
