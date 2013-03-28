@@ -259,15 +259,15 @@ get '/feed.xml' do
       xml.channel do
         xml.title "watchmetrain"
         xml.description "a log and graphs"
-        xml.link "http://watchmetrain.net/"
+        xml.link "https://watchmetrain.net/"
 
         @articles.each do |a|
           xml.item do
             xml.title a.title
-            xml.link "http://watchmetrain.net/blog/#{a.slug}"
+            xml.link "https://watchmetrain.net/blog/#{a.slug}"
             xml.description a.html_body
             xml.pubDate Time.parse(a.date.to_s).rfc822()
-            xml.guid "http://watchmetrain.net/blog/#{a.slug}"
+            xml.guid "https://watchmetrain.net/blog/#{a.slug}"
           end
         end
       end
