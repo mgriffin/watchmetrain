@@ -1,13 +1,8 @@
-%p{:id => 'distanceCalculator'}
-  <span class="TKAdjustableNumber" data-var="kilometres">km</span> is the same as <span data-var="miles" data-format="%.1f"> miles</span>
 %form{:id => 'convert'}
   %fieldset
     %legend Distances
-    %input{:type => 'text', :name => 'km', :id => 'km'}
-    %label{:for => 'km'} kms
-    \=
-    %input{:type => 'text', :name => 'mile', :id => 'mile'}
-    %label{:for => 'mile'} miles
+      %p{:id => 'distanceCalculator'}
+        <span class="TKAdjustableNumber" data-var="kilometres">km</span> is the same as <span data-var="miles" data-format="%.1f"> miles</span>
   %fieldset
     %legend Speeds
     %input{:type => 'text', :name => 'kmph', :id => 'kmph'}
