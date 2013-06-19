@@ -1,3 +1,5 @@
+%p{:id => 'distanceCalculator'}
+  <span class="TKAdjustableNumber" data-var="kilometres">km</span> is the same as <span data-var="miles" data-format="%.1f"> miles</span>
 %form{:id => 'convert'}
   %fieldset
     %legend Distances
@@ -33,3 +35,10 @@
         %td#10k
 %script{:type => "application/x-javascript", :src => "/javascript/jquery-1.5.min.js"}
 %script{:type => "application/x-javascript", :src => "/javascript/application.js"}
+
+%script{:type => "application/x-javascript", :src => "/javascript/tangle.js"}
+%script{:type => "application/x-javascript", :src => "/javascript/tangleKit/mootools.js"}
+%script{:type => "application/x-javascript", :src => "/javascript/tangleKit/BVTouchable.js"}
+%script{:type => "application/x-javascript", :src => "/javascript/tangleKit/sprintf.js"}
+%script{:type => "application/x-javascript", :src => "/javascript/tangleKit/TangleKit.js"}
+%script{:type => "application/x-javascript", :src => "/javascript/tangle_app.js"}
