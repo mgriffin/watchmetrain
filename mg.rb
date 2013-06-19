@@ -6,6 +6,7 @@ require 'xml-sitemap'
 require 'chronic'
 require 'chronic_duration'
 require 'chronic_distance'
+require 'haml'
 
 require './db'
 require './helper'
