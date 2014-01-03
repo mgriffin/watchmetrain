@@ -11,4 +11,6 @@ gem 'chronic_distance'
 gem 'scruffy'
 gem 'builder', '>= 2.0'
 gem 'mysql'
+
+gem 'rake'
 gem 'rack-test', :require => 'rack/test'
