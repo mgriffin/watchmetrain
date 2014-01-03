@@ -1,5 +1,5 @@
+require 'test/test_helper.rb'
 require 'mg.rb'
-require 'test/unit'
 require 'rack/test'
 
 class MGTest < Test::Unit::TestCase
