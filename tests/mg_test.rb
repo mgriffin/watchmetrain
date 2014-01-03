@@ -11,6 +11,6 @@ class MGTest < Test::Unit::TestCase
 
   def test_about
     get '/about'
-    assert_match /Kildare/, last_response.body
+    assert_match(/Kildare/, last_response.body)
   end
 end
