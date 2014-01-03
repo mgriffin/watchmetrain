@@ -1,7 +1,5 @@
-require 'rubygems'
+require 'test/test_helper.rb'
 require 'helper.rb'
-require 'chronic_distance'
-require 'test/unit'
 
 class HelperTest < Test::Unit::TestCase
   def test_ordinalize

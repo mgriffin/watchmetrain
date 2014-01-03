@@ -14,3 +14,4 @@ gem 'mysql'
 
 gem 'rake'
 gem 'rack-test', :require => 'rack/test'
+gem 'simplecov', :require => false, :group => :test
