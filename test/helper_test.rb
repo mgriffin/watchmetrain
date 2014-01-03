@@ -11,6 +11,16 @@ class HelperTest < Test::Unit::TestCase
     assert_equal 'Fri 3rd Jan, 2014', helper.short_date(Time.new(2014,1,3,12,13,14))
   end
 
+  def test_long_date
+    helper = TestHelper.new
+    assert_equal 'Friday, 3rd of January, 2014', helper.long_date(Time.new(2014,1,3,12,13,14))
+  end
+
+  def test_slug
+    helper = TestHelper.new
+    assert_equal '20140103-this-is-a-title', helper.slug('This is a title', Time.new(2014,1,3,12,13,14))
+  end
+
   def test_ordinalize
     assert_equal '1st', 1.ordinalize
     assert_equal '2nd', 2.ordinalize
