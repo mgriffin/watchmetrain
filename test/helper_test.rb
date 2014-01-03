@@ -1,7 +1,16 @@
 require 'test/test_helper.rb'
 require 'helper.rb'
 
+class TestHelper
+  include Helpers
+end
+
 class HelperTest < Test::Unit::TestCase
+  def test_short_date
+    helper = TestHelper.new
+    assert_equal 'Fri 3rd Jan, 2014', helper.short_date(Time.new(2014,1,3,12,13,14))
+  end
+
   def test_ordinalize
     assert_equal '1st', 1.ordinalize
     assert_equal '2nd', 2.ordinalize
