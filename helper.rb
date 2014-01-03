@@ -1,8 +1,4 @@
 module Helpers
-  def days_left
-    (Date.parse("2011-05-21")-Date.today).to_i
-  end
-
   def short_date(date)
     date.strftime("%a #{date.day.ordinalize} %b, %Y")
   end
