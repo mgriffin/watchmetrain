@@ -16,5 +16,38 @@ class HelperTest < Test::Unit::TestCase
     assert_equal '10km', 10000000.to_km
     assert_equal '54km', 54000000.to_km
     assert_equal '32.5km', 32500000.to_km
+    assert_equal '20000km', 20000000000.to_km
+  end
+
+  def test_start_of_day
+    assert_equal Time.new(2014,1,3,0,0,0), Time.new(2014,1,3,12,13,14).start_of_day
+  end
+
+  def test_end_of_day
+    assert_equal Time.new(2014,1,3,23,59,59), Time.new(2014,1,3,12,13,14).end_of_day
+  end
+
+  def test_start_of_week
+    assert_equal Time.new(2013,12,30,0,0,0), Time.new(2014,1,3,12,13,14).start_of_week
+  end
+
+  def test_end_of_week
+    assert_equal Time.new(2014,1,5,23,59,59), Time.new(2014,1,3,12,13,14).end_of_week
+  end
+
+  def test_start_of_month
+    assert_equal Time.new(2014,1,1,0,0,0), Time.new(2014,1,3,12,13,14).start_of_month
+  end
+
+  def test_end_of_month
+    assert_equal Time.new(2014,1,31,23,59,59), Time.new(2014,1,3,12,13,14).end_of_month
+  end
+
+  def test_start_of_year
+    assert_equal Time.new(2014,1,1,0,0,0), Time.new(2014,1,3,12,13,14).start_of_year
+  end
+
+  def test_end_of_year
+    assert_equal Time.new(2014,12,31,23,59,59), Time.new(2014,1,3,12,13,14).end_of_year
   end
 end
