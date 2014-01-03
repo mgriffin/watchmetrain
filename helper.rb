@@ -1,4 +1,4 @@
-helpers do
+module Helpers
   def days_left
     (Date.parse("2011-05-21")-Date.today).to_i
   end
@@ -85,34 +85,6 @@ class Bignum
     end
     ChronicDistance.output(self, :format => :short, :unit => 'kilometers')
   end
-end
-require 'rack'
-
-module Rack
-  class Request
-
-    # The IP address of the upstream-most client (e.g., the browser). This
-    # is reliable even when the request is made through a reverse proxy or
-    # other gateway.
-    def remote_ip
-      @env['HTTP_X_FORWARDED_FOR'] || @env['HTTP_CLIENT_IP'] || @env['REMOTE_ADDR']
-    end
-
-  end
-end
-
-module Sinatra
-  module ExceptBeforeFilter
-    def except_before(routes, &block)
-      before do
-        routes.map!{|x| x = x.gsub(/\*/, '\w+')}
-        routes_regex = routes.map{|x| x = x.gsub(/\//, '\/')}
-        instance_eval(&block) unless routes_regex.any? {|route| (request.path =~ /^#{route}$/) != nil}
-      end
-    end
-  end
-
-  register ExceptBeforeFilter
 end
 
 class Time

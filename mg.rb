@@ -12,6 +12,7 @@ require './db'
 require './helper'
 require './graph'
 
+helpers Helpers
 enable :sessions
 
 #except_before(['/drafts/*', '/logs']) do
