@@ -7,7 +7,7 @@ class HelperTest < Test::Unit::TestCase
     assert_equal '2nd', 2.ordinalize
     assert_equal '3rd', 3.ordinalize
     assert_equal '4th', 4.ordinalize
-    assert_equal '10th', 10.ordinalize
+    assert_equal '11th', 11.ordinalize
   end
 
   def test_to_km
