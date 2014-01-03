@@ -9,7 +9,6 @@ require 'chronic_distance'
 require 'haml'
 
 require './db'
-require './helper'
 require './graph'
 
 helpers Helpers
