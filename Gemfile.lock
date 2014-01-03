@@ -17,6 +17,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rake (10.1.1)
     scruffy (0.2.6)
     sequel (3.44.0)
     sinatra (1.3.4)
@@ -42,6 +43,7 @@ DEPENDENCIES
   haml
   mysql
   rack-test
+  rake
   scruffy
   sequel
   sinatra
