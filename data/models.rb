@@ -13,14 +13,6 @@ class Article < Sequel::Model
     html_body.gsub(/^(.*?)<\/p>.*$/mis,'\1')
   end
 
-  def update_title(value)
-
-    raise "[ ! ] Could not find title for post" if value.nil?
-
-    self.title = value
-    self.name = value.downcase.gsub(/[^\w]/,"_").gsub(/__/,"")
-  end
-  
   def published?
     self.published
   end
