@@ -14,4 +14,8 @@ class ArticleModelTest < Test::Unit::TestCase
   def test_summarise
     assert_match /<p>I started it/, @article.summarise
   end
+
+  def test_published
+    assert @article.published?
+  end
 end
