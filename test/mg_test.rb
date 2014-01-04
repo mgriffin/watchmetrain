@@ -7,6 +7,7 @@ class MGTest < Test::Unit::TestCase
 
   def app
     Sinatra::Application
+    set :session_secret, 'super secret'
   end
 
   def test_about
