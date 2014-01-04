@@ -6,3 +6,4 @@ end
 
 require 'test/unit'
 require 'chronic_distance'
+require 'haml'

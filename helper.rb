@@ -21,7 +21,8 @@ module Helpers
 
   # Usage: partial :foo
   def partial(page, locals={})
-    haml page, :layout => false, :locals => locals
+    engine = Haml::Engine.new(page, :layout => false)
+    engine.render(:locals => locals)
   end
 
   ### authinabox from http://gist.github.com/40246
