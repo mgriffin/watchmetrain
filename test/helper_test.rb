@@ -27,6 +27,11 @@ class HelperTest < Test::Unit::TestCase
     assert_equal 'even', helper.alternate
   end
 
+  def test_partial
+    helper = TestHelper.new
+    assert_equal "<h1>Stuff</h1>\n", helper.partial('%h1 Stuff')
+  end
+
   def test_ordinalize
     assert_equal '1st', 1.ordinalize
     assert_equal '2nd', 2.ordinalize
