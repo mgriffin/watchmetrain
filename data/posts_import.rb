@@ -378,3 +378,5 @@ In the end we lost by 6 points, but we were well beaten before the final whistle
 I was really disappointed as I felt I had been bypassed in the match again, not the first time that has happened this year. I wasn't able to get into the game at all even though I was really up for it beforehand. I don't know whether I lwt myself drift out of games or if there is a way to force my way back in. I guess I will have to wait until next year to find out.
 
 It's a pity we weren't able to win the match especially as I had to leave a good friend's wedding to go and play in it. We did get to meet up the next day and have a good chat, but it wasn't the same. On the plus side, myself and Louise got a good (if short) surf in on Sunday afternoon before heading back to the metropolis of Celbridge. More of that to follow in the next few weeks with a bit of luck and the right storms in the Atlantic.", :slug => "20100914-championship-semi-final", :published => true, :publish_date => "2010-09-14 12:00")
+DB[:tags].insert(:name => "run")
+DB[:articles_tags].insert(:article_id => 1, :tag_id => 1)
