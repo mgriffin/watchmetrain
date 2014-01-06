@@ -8,6 +8,7 @@ require 'chronic_duration'
 require 'chronic_distance'
 require 'haml'
 
+require './helper'
 require './db'
 require './graph'
 
@@ -26,9 +27,9 @@ enable :sessions
 
 get '/' do
   if logged_in?
-    @articles = Article.order(:publish_date.desc).limit(5)
+    @articles = Article.order(Sequel.desc(:publish_date)).limit(5)
   else
-    @articles = Article.filter(:published => true).order(:publish_date.desc).limit(5)
+    @articles = Article.filter(:published => true).order(Sequel.desc(:publish_date)).limit(5)
   end
   @totals = Exercise.totals
   haml :home
@@ -126,9 +127,9 @@ end
 
 get '/blog' do
   if logged_in?
-    @articles = Article.order(:publish_date.desc)
+    @articles = Article.order(Sequel.desc(:publish_date))
   else
-    @articles = Article.filter(:published => true).order(:publish_date.desc)
+    @articles = Article.filter(:published => true).order(Sequel.desc(:publish_date))
   end
   @title = "archive"
   haml :blog
@@ -223,7 +224,7 @@ not_found do
 end
 
 get '/sitemap.xml' do
-  articles = Article.filter(:published => true).order(:publish_date.desc)
+  articles = Article.filter(:published => true).order(Sequel.desc(:publish_date))
   tags = Tag.all
   map = XmlSitemap::Map.new('watchmetrain.net') do |m|
     m.add(:url => '/', :period => :daily)
@@ -253,7 +254,7 @@ get '/sitemap.xml' do
 end
 
 get '/feed.xml' do
-  @articles = Article.filter(:published => true).order(:publish_date.desc).limit(10)
+  @articles = Article.filter(:published => true).order(Sequel.desc(:publish_date)).limit(10)
   builder do |xml|
     xml.instruct! :xml, :version => '1.0'
     xml.rss :version => "2.0" do

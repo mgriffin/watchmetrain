@@ -47,8 +47,8 @@ class Article < Sequel::Model
 end
 
 class Tag < Sequel::Model
-  many_to_many :articles, :order => :publish_date.desc
-  many_to_many :exercises, :order => :start_time.desc
+  many_to_many :articles, :order => Sequel.desc(:publish_date)
+  many_to_many :exercises, :order => Sequel.desc(:start_time)
 end
 
 class User < Sequel::Model
@@ -66,12 +66,12 @@ class User < Sequel::Model
 end
 
 class Log < Sequel::Model
-  set_dataset dataset.order(:date.desc)
+  set_dataset dataset.order(Sequel.desc(:date))
 end
 
 class Exercise < Sequel::Model
-  #set_dataset dataset.order(:start_time.desc)
-  set_dataset dataset.filter(~{:deleted => true}).order(:start_time.desc)
+  #set_dataset dataset.order(Sequel.desc(:start_time))
+  set_dataset dataset.exclude({:deleted => true}).order(Sequel.desc(:start_time))
   many_to_many :tags
   
   def self.totals
