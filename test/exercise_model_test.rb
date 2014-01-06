@@ -16,7 +16,7 @@ class ExerciseModelTest < Test::Unit::TestCase
   end
 
   def test_years
-    assert_equal [], Exercise.years
+    assert_equal [{:year => 2008, :total => 264}, {:year=>2009, :total=>718}, {:year=>2010, :total=>2137}, {:year=>2011, :total=>1}], Exercise.years
   end
 
   def test_month_totals

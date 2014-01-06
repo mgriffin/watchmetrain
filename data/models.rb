@@ -93,9 +93,9 @@ class Exercise < Sequel::Model
   def self.years
     years = []
     years_and_totals = []
-    @temp = Exercise.select(:start_time)
+    @temp = Exercise.map{ |x| x.start_time }
     @temp.each do |t|
-      d, m, dd, t, o, y = t[:start_time].to_s.split
+      y = t.year
       years << y
     end
     years.sort!.uniq!
