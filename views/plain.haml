@@ -7,5 +7,5 @@
     <link rel="stylesheet" type="text/css" href="/css/error.css" />
   %body
     = yield
-    -if production?
+    -if :environment == "production"
       ~ haml :google_analytics, :layout => false
