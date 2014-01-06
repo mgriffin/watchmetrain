@@ -31,5 +31,5 @@
         %a{:href => '/about'}Mike Griffin
         %a{:href => 'http://feeds.feedburner.com/Watchmetrainnet-RecentPosts'}
           %img{:src => '/images/feed-icon-14x14.png', :alt => 'feed'}
-    -if production?
+    - if :environment == "production"
       ~ haml :google_analytics, :layout => false
