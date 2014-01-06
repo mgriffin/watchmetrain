@@ -28,4 +28,8 @@ class ArticleModelTest < Test::Unit::TestCase
     tagged_article = Article.tagged('narf')
     assert_equal [], tagged_article
   end
+
+  def test_tag_names
+    assert_equal ['run'], @article.tag_names
+  end
 end
