@@ -41,7 +41,7 @@ module Sinatra
           Scruffy::Renderers::Standard.new
         end
         #graph.render(:min_value => 0).gsub(/viewBox\=\"([0-9]+)\s100\s([0-9]+)\s200\"/, 'viewBox="0 0 \1 \2"')
-        graph.render(:min_value => 0).gsub(/viewBox\=\"([0-9]+)\s100\s([0-9]+)\s200\"/, '')
+        graph.render(:min_value => 0).gsub(/viewBox\=\"([0-9]+)\s100\s([0-9]+)\s200\"/, 'viewBox="100 200 \1 \2"')
       end
     end
 
