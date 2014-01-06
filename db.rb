@@ -83,6 +83,6 @@ end
 
 DB[:users].insert(:username => "mike", :hashed_password => "3cf448e735f411d7e46bafe79388adaced8f7109", :salt => "A L0ng sAl7", :name => "Mike")
 
-require 'data/models'
-require 'data/posts_import'
-require 'data/sports_import'
+require './data/models'
+require './data/posts_import'
+require './data/sports_import'
