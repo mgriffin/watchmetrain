@@ -14,5 +14,31 @@ class ExerciseModelTest < Test::Unit::TestCase
   def test_kmdistance
     assert_equal '1.2km', @exercise.kmdistance
   end
+
+  def test_years
+    assert_equal [], Exercise.years
+  end
+
+  def test_month_totals
+    assert_equal [175, 149, 8, 220, 311, 211, 172, 188, 433, 267, 0, 0], Exercise.month_totals(2010)
+  end
+
+  def test_year_totals
+    assert_equal [264, 718, 2137, 1, 0, 0, 0], Exercise.year_totals
+  end
+
+  def test_tag_names
+    assert_equal ['commute', 'run'], @exercise.tag_names
+  end
+
+  def test_tagged
+    tagged_exercise = Exercise.tagged('run')
+    assert_equal 222, tagged_exercise[0][:id]
+  end
+
+  def test_tagged_with_an_invalid_tag
+    tagged_exercise = Exercise.tagged('narf')
+    assert_equal [], tagged_exercise
+  end
 end
 
