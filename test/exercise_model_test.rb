@@ -7,6 +7,10 @@ class ExerciseModelTest < Test::Unit::TestCase
     @exercise = Exercise.first
   end
 
+  def test_nicetime
+    assert_equal '2011-01-12', @exercise.nicetime
+  end
+
   def test_kmdistance
     assert_equal '1.2km', @exercise.kmdistance
   end
