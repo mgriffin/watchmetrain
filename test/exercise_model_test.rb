@@ -32,6 +32,10 @@ class ExerciseModelTest < Test::Unit::TestCase
     assert_equal ['narf', 'commute', 'run'], @exercise.tag_names
   end
 
+  def test_tag_names_sets_a_new_tag_with_an_array
+    assert_equal ['narf', 'commute', 'run'], @exercise.tag_names = ['narf', 'commute', 'run']
+  end
+
   def test_tag_names
     assert_equal ['commute', 'run'], @exercise.tag_names
   end
