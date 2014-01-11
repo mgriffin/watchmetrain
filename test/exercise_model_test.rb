@@ -27,6 +27,11 @@ class ExerciseModelTest < Test::Unit::TestCase
     assert_equal [264, 718, 2137, 1, 0, 0, 0], Exercise.year_totals
   end
 
+  def test_tag_names_sets_a_new_tag
+    assert_equal 'narf, commute, run', @exercise.tag_names = 'narf, commute, run'
+    assert_equal ['narf', 'commute', 'run'], @exercise.tag_names
+  end
+
   def test_tag_names
     assert_equal ['commute', 'run'], @exercise.tag_names
   end
