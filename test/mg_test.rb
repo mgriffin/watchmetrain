@@ -23,4 +23,46 @@ class MGTest < Test::Unit::TestCase
     get '/about'
     assert_match(/Kildare/, last_response.body)
   end
+
+  def test_archive
+    get'/archive'
+    assert_match(/Races I've done/, last_response.body)
+  end
+
+  def test_archive_year
+    get'/archive/2010'
+    assert_match(/January/, last_response.body)
+  end
+
+  def test_archive_year_month
+    get'/archive/2010/1'
+    assert_match(/when/, last_response.body)
+    assert_match(/what/, last_response.body)
+    assert_match(/how far/, last_response.body)
+    assert_match(/how long/, last_response.body)
+  end
+
+  def test_week
+    get '/week'
+    assert_match(/when/, last_response.body)
+    assert_match(/what/, last_response.body)
+    assert_match(/how far/, last_response.body)
+    assert_match(/how long/, last_response.body)
+  end
+
+  def test_month
+    get '/month'
+    assert_match(/when/, last_response.body)
+    assert_match(/what/, last_response.body)
+    assert_match(/how far/, last_response.body)
+    assert_match(/how long/, last_response.body)
+  end
+
+  def test_year
+    get '/year'
+    assert_match(/when/, last_response.body)
+    assert_match(/what/, last_response.body)
+    assert_match(/how far/, last_response.body)
+    assert_match(/how long/, last_response.body)
+  end
 end
