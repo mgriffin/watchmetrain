@@ -44,4 +44,15 @@ class frontendTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isOK());
         $this->assertEquals('convert - watchmetrain', $title);
     }
+
+    public function testThereIsAnArchivePage()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/archive');
+
+        $title = $crawler->filterXpath('//head/title')->text();
+
+        $this->assertTrue($client->getResponse()->isOK());
+        $this->assertEquals('archive - watchmetrain', $title);
+    }
 }

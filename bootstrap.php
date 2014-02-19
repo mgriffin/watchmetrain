@@ -34,4 +34,10 @@ $app->get('/convert', function (Application $app) {
     );
 });
 
+$app->get('/archive', function (Application $app) {
+    return $app['twig']->render(
+        'archive.html'
+    );
+});
+
 return $app;
