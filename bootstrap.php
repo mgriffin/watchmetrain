@@ -19,6 +19,11 @@ $app->get('/', function (Application $app) {
         'index.html'
     );
 });
+
+$app->get('/about', function (Application $app) {
+    return $app['twig']->render(
+        'about.html'
+    );
 });
 
 return $app;

@@ -19,4 +19,12 @@ class frontendTest extends WebTestCase
 
         $this->assertTrue($client->getResponse()->isOK());
     }
+
+    public function testThereIsAnAboutPage()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/about');
+
+        $this->assertTrue($client->getResponse()->isOK());
+    }
 }
