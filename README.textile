@@ -1,12 +1,7 @@
 h2. "http://watchmetrain.net":http://watchmetrain.net
 
+!https://travis-ci.org/mgriffin/watchmetrain.png?branch=to_php!:https://travis-ci.org/mgriffin/watchmetrain
+
 A site to track my training over the long term so that I can get some stats.
 
-Now running on "sinatra":http://www.sinatrarb.com/ with a few extra gems to make life easier.
-
-  * redcloth - for textile conversion
-  * rack-flash - to show messages when I'm logged in
-  * xml-sitemap - to create a nice sitemap
-  * chronic - easier date parsing
-  * chronic_duration - nice time differences
-  * chronic_distance - outputs the distances
+This branch is being rewritten in PHP and using Silex.
