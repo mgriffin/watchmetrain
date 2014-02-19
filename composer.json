@@ -1,6 +1,7 @@
 {
   "require": {
-    "silex/silex": "1.1.*"
+    "silex/silex": "1.1.*",
+    "twig/twig": "1.15.*"
   },
   "require-dev": {
     "symfony/browser-kit": ">=2.3,<2.4-dev"
