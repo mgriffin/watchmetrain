@@ -17,7 +17,10 @@ class frontendTest extends WebTestCase
         $client = $this->createClient();
         $crawler = $client->request('GET', '/');
 
+        $title = $crawler->filterXpath('//head/title')->text();
+
         $this->assertTrue($client->getResponse()->isOK());
+        $this->assertEquals('index - watchmetrain', $title);
     }
 
     public function testThereIsAnAboutPage()
@@ -25,7 +28,10 @@ class frontendTest extends WebTestCase
         $client = $this->createClient();
         $crawler = $client->request('GET', '/about');
 
+        $title = $crawler->filterXpath('//head/title')->text();
+
         $this->assertTrue($client->getResponse()->isOK());
+        $this->assertEquals('about - watchmetrain', $title);
     }
 
     public function testThereIsAConvertPage()
@@ -33,6 +39,9 @@ class frontendTest extends WebTestCase
         $client = $this->createClient();
         $crawler = $client->request('GET', '/convert');
 
+        $title = $crawler->filterXpath('//head/title')->text();
+
         $this->assertTrue($client->getResponse()->isOK());
+        $this->assertEquals('convert - watchmetrain', $title);
     }
 }
