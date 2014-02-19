@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form id="convert">
+  <fieldset>
+    <legend>Distances</legend>
+    <p id="distanceCalculator">
+    <span style="pointer-events: auto;" class="TKAdjustableNumber" data-var="kilometres"><span>5</span><div style="display: none;" class="TKAdjustableNumberHelp">drag</div>km</span> is the same as <span data-var="miles" data-format="%.1f"><span>3.1</span> miles</span>
+    </p>
+  </fieldset>
+  <fieldset>
+    <legend>Speeds</legend>
+    <input id="kmph" name="kmph" type="text">
+    <label for="kmph">km/h</label>
+    <br>
+    <input id="mph" name="mph" type="text">
+    <label for="mph">mph</label>
+    <br>
+    <input id="minperkm" name="minperkm" type="text">
+    <label for="minperkm">min/km</label>
+    <br>
+    <input id="minpermile" name="minpermile" type="text">
+    <label for="minpermile">min/mile</label>
+  </fieldset>
+</form>
+<script src="/javascript/jquery-1.5.min.js" type="application/x-javascript"></script>
+<script src="/javascript/application.js" type="application/x-javascript"></script>
+<script src="/javascript/tangle.js" type="application/x-javascript"></script>
+<script src="/javascript/tangleKit/mootools.js" type="application/x-javascript"></script>
+<script src="/javascript/tangleKit/BVTouchable.js" type="application/x-javascript"></script>
+<script src="/javascript/tangleKit/sprintf.js" type="application/x-javascript"></script>
+<script src="/javascript/tangleKit/TangleKit.js" type="application/x-javascript"></script>
+<script src="/javascript/tangle_app.js" type="application/x-javascript"></script>
+{% endblock %}

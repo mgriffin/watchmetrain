@@ -27,4 +27,12 @@ class frontendTest extends WebTestCase
 
         $this->assertTrue($client->getResponse()->isOK());
     }
+
+    public function testThereIsAConvertPage()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/convert');
+
+        $this->assertTrue($client->getResponse()->isOK());
+    }
 }

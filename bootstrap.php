@@ -26,4 +26,10 @@ $app->get('/about', function (Application $app) {
     );
 });
 
+$app->get('/convert', function (Application $app) {
+    return $app['twig']->render(
+        'convert.html'
+    );
+});
+
 return $app;
