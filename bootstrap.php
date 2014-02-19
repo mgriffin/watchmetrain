@@ -15,8 +15,10 @@ $app->register(
 );
 
 $app->get('/', function (Application $app) {
+    $articles = array();
     return $app['twig']->render(
-        'index.html'
+        'index.html',
+        array('articles' => $articles)
     );
 });
 

@@ -3,6 +3,14 @@
 {% block title %}index{% endblock %}
 {% block content %}
 <h1>:-(</h1>
-<p>Things broke and I lost a lot of data. I'm trying to get it back and it'll reappear here
+<p>Things broke and I lost some data. I'm trying to get it back and it'll reappear here
 as I get it back on line</p>
+
+<div class="bloglist">
+  <ol>
+    {% for article in articles %}
+    <li><a href="/blog/{{ article.slug }}">{{ article.title }}</a><span class="blogdate">{{ article.publish_date }}</span>
+    {% endfor %}
+  </ol>
+</div>
 {% endblock %}
