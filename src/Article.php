@@ -12,4 +12,16 @@ class Article
     {
         return $this->title = $title;
     }
+
+    public function setSlug($slug = null)
+    {
+        if ($slug === null) {
+        }
+        return $this->slug = $slug;
+    }
+
+    public function setDate($date)
+    {
+        return $this->date = $date;
+    }
 }

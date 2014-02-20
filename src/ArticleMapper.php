@@ -14,7 +14,13 @@ class ArticleMapper
 
     public function getList()
     {
-        $sql = "SELECT * FROM articles LIMIT 5";
+        $sql = "
+            SELECT title, slug, publish_date 
+            FROM articles 
+            WHERE published = 1
+            ORDER BY publish_date DESC
+            LIMIT 5
+            ";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         $rows = $stmt->fetchAll();
@@ -31,6 +37,8 @@ class ArticleMapper
     {
         $article = new Article();
         $article->setTitle($row['title']);
+        $article->setSlug($row['slug']);
+        $article->setDate($row['publish_date']);
 
         return $article;
     }
