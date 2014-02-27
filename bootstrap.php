@@ -1,5 +1,8 @@
 <?php
-require 'vendor/autoload.php';
+if (!defined('APP_ROOT')) {
+    define('APP_ROOT', __DIR__ . '/');
+}
+require APP_ROOT . 'vendor/autoload.php';
 
 use \Silex\Application;
 
