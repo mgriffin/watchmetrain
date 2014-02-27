@@ -1,8 +1,0 @@
-%table
-  -@totals.each_with_index do |t, i|
-    %tr{ :class => alternate('other', '') }
-      %td
-        %a{:href => "/archive/#{@title}/#{i+1}"}= Date::MONTHNAMES[i+1]
-      %td
-        #{t}km
-%img{:src => "/graphs/#{@title}/monthly.svg", :height => 400, :width => 600}

@@ -1,6 +1,0 @@
--@articles.each do |a|
-  %h3
-    %a{:href => '/blog/'+a.slug}= a.title
-    - unless a.published?
-      %span.unpublished [not yet live]
-  .date= a.date

@@ -1,8 +1,0 @@
-.bloglist
-  %ol
-    -@articles.each do |a|
-      %li
-        %a{:href => '/blog/'+a.slug}= a.title
-        - unless a.published?
-          %span.unpublished [not yet live]
-        %span.blogdate= a.date
