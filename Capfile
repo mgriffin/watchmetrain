@@ -22,6 +22,6 @@ server domain, :app, :web
 
 namespace :deploy do
   task :restart do
-    run "cd #{current_path} && composer install"
+    run "cd #{current_path} && /usr/local/bin/composer install"
   end
 end
