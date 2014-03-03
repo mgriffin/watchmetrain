@@ -17,6 +17,13 @@ $app->register(
     )
 );
 
+// Set up the database connection
+if (file_exists(APP_ROOT . 'database.php')) {
+    require APP_ROOT . 'database.php';
+} else {
+    throw new RuntimeException("There is no database configuration");
+}
+
 $app->get('/', function (Application $app) {
     $articles = array();
     return $app['twig']->render(
@@ -38,8 +45,13 @@ $app->get('/convert', function (Application $app) {
 });
 
 $app->get('/archive', function (Application $app) {
+    $mapper = new \WMT\ArticleMapper($app['db']);
+    $articles = $mapper->getList();
     return $app['twig']->render(
-        'archive.html'
+        'archive.html',
+        array(
+            'articles' => $articles
+        )
     );
 });
 
