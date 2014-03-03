@@ -30,6 +30,16 @@ class Article
         return $this->slug;
     }
 
+    public function setBody($body)
+    {
+        return $this->body = $body;
+    }
+
+    public function getBody()
+    {
+        return $this->body;
+    }
+
     public function setDate($date)
     {
         return $this->date = $date;

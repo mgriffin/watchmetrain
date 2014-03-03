@@ -61,4 +61,15 @@ $app->get('/blog', function (Application $app) {
     );
 });
 
+$app->get('/blog/{slug}', function (Application $app, $slug) {
+    $mapper = new \WMT\ArticleMapper($app['db']);
+    $article = $mapper->getArticle($slug);
+    return $app['twig']->render(
+        'blog_post.html',
+        array(
+            'article' => $article
+        )
+    );
+});
+
 return $app;

@@ -33,6 +33,23 @@ class ArticleMapper
         return $result;
     }
 
+    public function getArticle($slug)
+    {
+        $sql = "
+            SELECT title, slug, publish_date
+            FROM articles
+            WHERE published = 1
+            AND slug = ?
+            ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(array($slug));
+        $row = $stmt->fetch();
+
+        $result = $this->createArticleFromRow($row);
+
+        return $result;
+    }
+
     public function createArticleFromRow($row)
     {
         $article = new Article();

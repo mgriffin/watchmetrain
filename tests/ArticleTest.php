@@ -37,4 +37,31 @@ class ArticleTest extends PHPUnit_Framework_TestCase
             $this->assertInstanceof('\WMT\Article', $r);
         }
     }
+
+    public function testGetarticleReturnsAnArticle()
+    {
+        $dbResultSet = array('title' => 'This is a title', 'slug' => 'this-is-a-title', 'publish_date' => '2014-03-03 12:00:00');
+
+        $mock = $this->getMockBuilder('stdClass')
+            ->setMethods(array('execute', 'fetch'))
+            ->getMock();
+        $mock->expects($this->once())
+            ->method('execute')
+            ->will($this->returnValue(true));
+        $mock->expects($this->once())
+            ->method('fetch')
+            ->will($this->returnValue($dbResultSet));
+
+        $conn = $this->getMockBuilder('stdClass')
+            ->setMethods(array('prepare'))
+            ->getMock();
+        $conn->expects($this->once())
+            ->method('prepare')
+            ->will($this->returnValue($mock));
+
+        $mapper = new \WMT\ArticleMapper($conn);
+        $result = $mapper->getArticle('this-is-a-title');
+
+        $this->assertEquals('This is a title', $result->getTitle());
+    }
 }
