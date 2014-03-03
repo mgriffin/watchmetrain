@@ -3,7 +3,7 @@
 {% block title %}archive{% endblock %}
 {% block content %}
   {% for article in articles %}
-  <h3><a href="{{ article.slug }}">{{ article.title }}</a></h3>
-  <span class="date">{{ article.date }}</span>
+  <h3><a href="{{ article.getSlug }}">{{ article.getTitle }}</a></h3>
+  <span class="date">{{ article.getDate }}</span>
   {% endfor %}
 {% endblock %}

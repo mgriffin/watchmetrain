@@ -13,6 +13,11 @@ class Article
         return $this->title = $title;
     }
 
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
     public function setSlug($slug = null)
     {
         if ($slug === null) {
@@ -20,8 +25,18 @@ class Article
         return $this->slug = $slug;
     }
 
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
     public function setDate($date)
     {
         return $this->date = $date;
+    }
+
+    public function getDate()
+    {
+        return $this->date;
     }
 }
