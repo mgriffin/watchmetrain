@@ -1,0 +1,14 @@
+<?php
+/** Rename me to database.php and edit to fit your own settings
+ *  You will have to change
+ *    <server_name>
+ *    <database_name>
+ *    <username>
+ *    <password>
+ **/
+
+$app['db'] = new \PDO(
+    'mysql:host=<server_name>;dbname=<database_name>',
+    '<username>',
+    '<password>'
+);
