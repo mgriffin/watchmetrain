@@ -44,6 +44,12 @@ $app->get('/convert', function (Application $app) {
     );
 });
 
+$app->get('/archive', function (Application $app) {
+    return $app['twig']->render(
+        'archive.html'
+    );
+});
+
 $app->get('/blog', function (Application $app) {
     $mapper = new \WMT\ArticleMapper($app['db']);
     $articles = $mapper->getList();
