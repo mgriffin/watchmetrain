@@ -3,7 +3,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
   <h3>{{ article.getTitle }}</h3>
-  <div class="date">{{ article.getDate }}</div>
+  <div class="date">{{ article.getDate | date("l, F jS, Y") }}</div>
   <div class="article">{{ article.getBody }}</div>
 {% endblock %}
 

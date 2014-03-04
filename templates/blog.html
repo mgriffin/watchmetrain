@@ -4,6 +4,6 @@
 {% block content %}
   {% for article in articles %}
   <h3><a href="/blog/{{ article.getSlug }}">{{ article.getTitle }}</a></h3>
-  <div class="date">{{ article.getDate }}</div>
+  <div class="date">{{ article.getDate | date("l, F jS, Y") }}</div>
   {% endfor %}
 {% endblock %}
