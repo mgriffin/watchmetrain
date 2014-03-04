@@ -1,27 +1,25 @@
-load 'deploy' if respond_to?(:namespace) # cap2 differentiator
+# Load DSL and Setup Up Stages
+require 'capistrano/setup'
 
-default_run_options[:pty] = true
+# Includes default deployment tasks
+require 'capistrano/deploy'
 
-# be sure to change these
-set :user, 'mike'
-set :domain, 'watchmetrain.net'
-set :application, 'watchmetrain'
+# Includes tasks from other gems included in your Gemfile
+#
+# For documentation on these, see for example:
+#
+#   https://github.com/capistrano/rvm
+#   https://github.com/capistrano/rbenv
+#   https://github.com/capistrano/chruby
+#   https://github.com/capistrano/bundler
+#   https://github.com/capistrano/rails
+#
+# require 'capistrano/rvm'
+# require 'capistrano/rbenv'
+# require 'capistrano/chruby'
+# require 'capistrano/bundler'
+# require 'capistrano/rails/assets'
+# require 'capistrano/rails/migrations'
 
-# the rest should be good
-set :repository,  "git@github.com:mgriffin/watchmetrain.git" 
-set :deploy_to, "/var/www/watchmetrain"
-set :deploy_via, :remote_cache
-set :scm, 'git'
-set :branch, 'to_php'
-set :git_shallow_clone, 1
-set :scm_verbose, true
-set :use_sudo, false
-set :keep_releases, 3
-
-server domain, :app, :web
-
-namespace :deploy do
-  task :restart do
-    run "cd #{current_path} && /usr/local/bin/composer install"
-  end
-end
+# Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
+Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }

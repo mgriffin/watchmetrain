@@ -1,22 +1,33 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+# config valid only for Capistrano 3.1
+lock '3.1.0'
 
-set :scm, :subversion
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+set :application, 'watchmetrain'
+set :repo_url, 'git@github.com:mgriffin/watchmetrain.git'
+set :branch, 'to_php'
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+set :deploy_to, '/var/www/watchmetrain'
 
-# If you are using Passenger mod_rails uncomment this:
-# if you're still using the script/reapear helper you will need
-# these http://github.com/rails/irs_process_scripts
+set :linked_files, %w{database.php}
 
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+namespace :deploy do
+
+  desc 'Install composer dependencies'
+  task :composer do
+    on roles(:web) do
+      within '/var/www/watchmetrain/current' do
+        execute :composer, 'install'
+      end
+    end
+  end
+
+  desc 'Restart php-fpm'
+  task :restart_fpm do
+    on roles(:web) do
+        #execute :service, 'php5-fpm', 'reload'
+        execute "sudo /usr/sbin/service php5-fpm reload"
+    end
+  end
+
+  after :finished, :composer
+  after :composer, :restart_fpm
+end
