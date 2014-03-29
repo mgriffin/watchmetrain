@@ -25,7 +25,8 @@ if (file_exists(APP_ROOT . 'database.php')) {
 }
 
 $app->get('/', function (Application $app) {
-    $articles = array();
+    $mapper = new \WMT\ArticleMapper($app['db']);
+    $articles = $mapper->getList();
     return $app['twig']->render(
         'index.html',
         array('articles' => $articles)
