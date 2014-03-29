@@ -68,9 +68,9 @@ class ArticleTest extends PHPUnit_Framework_TestCase
         $result = $mapper->getArticle('this-is-a-title');
 
         $this->assertEquals('This is a title', $result->getTitle());
-        $this->assertEquals('this-is-a-title', $result->getSlug())r
+        $this->assertEquals('this-is-a-title', $result->getSlug());
         $this->assertEquals('2014-03-03 12:00:00', $result->getDate());
-        $this->assertEquals('Here is the body', $result->getBody());
+        $this->assertEquals('<p>Here is the body</p>', $result->getBody());
     }
 
     public function slugCreationProvider()

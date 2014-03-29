@@ -1,6 +1,8 @@
 <?php
 namespace WMT;
 
+use \Netcarver\Textile\Parser as Textile;
+
 class Article
 {
     protected $title;
@@ -45,7 +47,8 @@ class Article
 
     public function getBody()
     {
-        return $this->body;
+        $parser = new Textile();
+        return $parser->textileThis($this->body);
     }
 
     public function setDate($date)
