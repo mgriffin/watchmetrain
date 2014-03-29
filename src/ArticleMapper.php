@@ -36,7 +36,7 @@ class ArticleMapper
     public function getArticle($slug)
     {
         $sql = "
-            SELECT title, slug, publish_date
+            SELECT title, slug, publish_date, body
             FROM articles
             WHERE published = 1
             AND slug = ?
@@ -56,6 +56,9 @@ class ArticleMapper
         $article->setTitle($row['title']);
         $article->setSlug($row['slug']);
         $article->setDate($row['publish_date']);
+        if (isset($row['body'])) {
+            $article->setBody($row['body']);
+        }
 
         return $article;
     }

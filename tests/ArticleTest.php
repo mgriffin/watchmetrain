@@ -40,7 +40,12 @@ class ArticleTest extends PHPUnit_Framework_TestCase
 
     public function testGetarticleReturnsAnArticle()
     {
-        $dbResultSet = array('title' => 'This is a title', 'slug' => 'this-is-a-title', 'publish_date' => '2014-03-03 12:00:00');
+        $dbResultSet = array(
+            'title' => 'This is a title',
+            'slug' => 'this-is-a-title',
+            'publish_date' => '2014-03-03 12:00:00',
+            'body' => 'Here is the body'
+        );
 
         $mock = $this->getMockBuilder('stdClass')
             ->setMethods(array('execute', 'fetch'))
@@ -63,6 +68,9 @@ class ArticleTest extends PHPUnit_Framework_TestCase
         $result = $mapper->getArticle('this-is-a-title');
 
         $this->assertEquals('This is a title', $result->getTitle());
+        $this->assertEquals('this-is-a-title', $result->getSlug())r
+        $this->assertEquals('2014-03-03 12:00:00', $result->getDate());
+        $this->assertEquals('Here is the body', $result->getBody());
     }
 
     public function slugCreationProvider()
