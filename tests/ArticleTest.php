@@ -78,7 +78,7 @@ class ArticleTest extends PHPUnit_Framework_TestCase
         return array(
             array('A fabulous title', 'a-fabulous-title'),
             array('this Title is a bIT MORE...CHALLENging', 'this-title-is-a-bit-more-challenging'),
-            array('Noël Séd 45-6523---3242sdafsd˙ó˙é˝ƒ', 'noel-sed-45-6523-3242sdafsd-o-e-f'),
+            array('Noël Séd 45-6523---3242sdafsd˙ó˙é˝', 'noel-sed-45-6523-3242sdafsd-o-e'),
             array('', '')
         );
     }
