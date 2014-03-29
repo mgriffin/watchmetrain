@@ -21,6 +21,14 @@ class Article
     public function setSlug($slug = null)
     {
         if ($slug === null) {
+            // replace non letter or digit by -
+            $slug = preg_replace('~[^\\pL\d]+~u', '-', $this->title);
+            $slug = trim($slug, '-');
+            if (function_exists('iconv')) {
+                $slug = iconv('utf-8', 'us-ascii//TRANSLIT', $slug);
+            }
+            $slug = strtolower($slug);
+            $slug = preg_replace('~[^-\w]+~', '', $slug);
         }
         return $this->slug = $slug;
     }
