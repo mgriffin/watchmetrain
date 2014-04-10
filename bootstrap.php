@@ -23,6 +23,22 @@ if (file_exists(APP_ROOT . 'database.php')) {
 } else {
     throw new RuntimeException("There is no database configuration");
 }
+$app['env'] = $_ENV['env'] ?: 'dev';
+ 
+if ('test' === $app['env']) {
+    $app['db'] = new \PDO('sqlite::memory:');
+    $app['db']->setAttribute(PDO::ATTR_ERRMODE, 
+        PDO::ERRMODE_EXCEPTION);
+
+    $app['db']->exec("CREATE TABLE articles(
+        id INTEGER PRIMARY KEY,
+        title TEXT,
+        slug TEXT,
+        body TEXT,
+        published INTEGER,
+        publish_date INTEGER
+    )");
+}
 
 $app->get('/', function (Application $app) {
     $mapper = new \WMT\ArticleMapper($app['db']);
