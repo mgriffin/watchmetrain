@@ -1,7 +1,0 @@
-h2. "http://watchmetrain.net":http://watchmetrain.net
-
-!https://travis-ci.org/mgriffin/watchmetrain.png?branch=to_php!:https://travis-ci.org/mgriffin/watchmetrain
-
-A site to track my training over the long term so that I can get some stats.
-
-This branch is being rewritten in PHP and using Silex.
