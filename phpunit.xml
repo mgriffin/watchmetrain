@@ -31,4 +31,7 @@
             </exclude>
         </whitelist>
     </filter>
+    <php>
+      <env name="env" value="test" />
+    </php>
 </phpunit>
