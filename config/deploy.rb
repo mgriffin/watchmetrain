@@ -3,7 +3,7 @@ lock '3.1.0'
 
 set :application, 'watchmetrain'
 set :repo_url, 'git@github.com:mgriffin/watchmetrain.git'
-set :branch, 'to_php'
+set :branch, 'master'
 
 set :deploy_to, '/var/www/watchmetrain'
 
