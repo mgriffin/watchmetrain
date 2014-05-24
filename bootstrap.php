@@ -38,6 +38,14 @@ if ('test' === $app['env']) {
         published INTEGER,
         publish_date INTEGER
     )");
+    $app['db']->exec("CREATE TABLE exercises(
+        id INTEGER PRIMARY KEY,
+        start_time DATETIME,
+        duration INTEGER,
+        distance INTEGER,
+        comment TEXT,
+        deleted INTEGER
+    )");
 }
 
 $app->get('/', function (Application $app) {
