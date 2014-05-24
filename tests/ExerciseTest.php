@@ -3,12 +3,23 @@ namespace WMT\Tests;
 
 class ExerciseTest extends \PHPUnit_Framework_TestCase
 {
-    public function testGetStartTimeReturnsATimeObject()
+    /**
+     * @dataProvider startTimeProvider
+     */
+    public function testSetStartTimeCanParseEnglishStrings($time, $expected)
     {
         $exercise = new \WMT\Exercise();
-        $result = $exercise->setStartTime('2014-05-25 12:00:00');
+        $exercise->setStartTime($time);
         $result = $exercise->getStartTime();
 
-        $this->assertInstanceOf('\DateTime', $result);
+        $this->assertEquals($expected, $result);
+    }
+
+    public function startTimeProvider()
+    {
+        return array(
+            array('2014-05-25 12:00:00', '2014-05-25 12:00:00'),
+            array('2013-05-25', '2013-05-25 00:00:00')
+        );
     }
 }

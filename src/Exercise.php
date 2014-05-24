@@ -11,11 +11,11 @@ class Exercise
 
     public function setStartTime($time)
     {
-        $this->start_time = $time;
+        $this->start_time = new \DateTime(gmdate('Y-m-d H:i:s', strtotime($time)));
     }
 
     public function getStartTime()
     {
-        return new \DateTime($this->start_time);
+        return $this->start_time->format('Y-m-d H:i:s');
     }
 }
