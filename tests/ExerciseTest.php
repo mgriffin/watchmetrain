@@ -19,7 +19,8 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             array('2014-05-25 12:00:00', '2014-05-25 12:00:00'),
-            array('2013-05-25', '2013-05-25 00:00:00')
+            array('2013-05-25', '2013-05-25 00:00:00'),
+            array('May 5th 2014 12pm', '2014-05-05 12:00:00')
         );
     }
 }
