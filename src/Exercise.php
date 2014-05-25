@@ -18,4 +18,22 @@ class Exercise
     {
         return $this->start_time->format('Y-m-d H:i:s');
     }
+
+    public function setDistance($distance)
+    {
+        preg_match('/([\d\.]+)(km|m?)/', $distance, $match);
+        $number = $match[1];
+        $unit = $match[2];
+
+        if($unit === 'km') {
+            $number = $number * 1000;
+        }
+
+        $this->distance = $number;
+    }
+
+    public function getDistance()
+    {
+        return $this->distance;
+    }
 }
