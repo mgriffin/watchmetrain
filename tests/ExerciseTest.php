@@ -3,14 +3,20 @@ namespace WMT\Tests;
 
 class ExerciseTest extends \PHPUnit_Framework_TestCase
 {
+    protected $exercise;
+
+    public function setUp()
+    {
+        $this->exercise = new \WMT\Exercise();
+    }
+
     /**
      * @dataProvider startTimeProvider
      */
     public function testSetStartTimeCanParseEnglishStrings($time, $expected)
     {
-        $exercise = new \WMT\Exercise();
-        $exercise->setStartTime($time);
-        $result = $exercise->getStartTime();
+        $this->exercise->setStartTime($time);
+        $result = $this->exercise->getStartTime();
 
         $this->assertEquals($expected, $result);
     }
@@ -20,9 +26,8 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
      */
     public function testDistance($distance, $expected)
     {
-        $exercise = new \WMT\Exercise();
-        $exercise->setDistance($distance);
-        $result = $exercise->getDistance();
+        $this->exercise->setDistance($distance);
+        $result = $this->exercise->getDistance();
 
         $this->assertEquals($expected, $result);
     }
@@ -32,20 +37,18 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
      */
     public function testDuration($duration, $expected)
     {
-        $exercise = new \WMT\Exercise();
-        $exercise->setDuration($duration);
-        $result = $exercise->getDuration();
+        $this->exercise->setDuration($duration);
+        $result = $this->exercise->getDuration();
 
         $this->assertEquals($expected, $result);
     }
 
     public function testIsDeleted()
     {
-        $exercise = new \WMT\Exercise();
-        $this->assertFalse($exercise->isDeleted());
+        $this->assertFalse($this->exercise->isDeleted());
 
-        $exercise->delete();
-        $this->assertTrue($exercise->isDeleted());
+        $this->exercise->delete();
+        $this->assertTrue($this->exercise->isDeleted());
     }
 
     /**
@@ -53,9 +56,8 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
      */
     public function testComment($comment, $expected)
     {
-        $exercise = new \WMT\Exercise();
-        $exercise->setComment($comment);
-        $result = $exercise->getComment();
+        $this->exercise->setComment($comment);
+        $result = $this->exercise->getComment();
 
         $this->assertEquals($expected, $result);
     }
