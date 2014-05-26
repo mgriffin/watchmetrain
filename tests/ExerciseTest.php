@@ -39,6 +39,15 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $result);
     }
 
+    public function testIsDeleted()
+    {
+        $exercise = new \WMT\Exercise();
+        $this->assertFalse($exercise->isDeleted());
+
+        $exercise->delete();
+        $this->assertTrue($exercise->isDeleted());
+    }
+
     public function startTimeProvider()
     {
         return array(

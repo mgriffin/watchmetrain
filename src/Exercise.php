@@ -9,6 +9,11 @@ class Exercise
     protected $comment;
     protected $deleted;
 
+    public function __construct()
+    {
+        $this->deleted = false;
+    }
+
     public function setStartTime($time)
     {
         $this->start_time = new \DateTime(gmdate('Y-m-d H:i:s', strtotime($time)));
@@ -48,5 +53,15 @@ class Exercise
     public function getDuration()
     {
         return $this->duration;
+    }
+
+    public function isDeleted()
+    {
+        return $this->deleted;
+    }
+
+    public function delete()
+    {
+        $this->deleted = true;
     }
 }
