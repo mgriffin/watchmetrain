@@ -21,15 +21,13 @@ class Exercise
 
     public function setDistance($distance)
     {
-        preg_match('/([\d\.]+)(km|m?)/', $distance, $match);
-        $number = $match[1];
-        $unit = $match[2];
+        preg_match('/(?P<number>[\d\.]+)(?P<unit>km|m?)/', $distance, $match);
 
-        if($unit === 'km') {
-            $number = $number * 1000;
+        if($match['unit'] === 'km') {
+            $match['number'] = $match['number'] * 1000;
         }
 
-        $this->distance = $number;
+        $this->distance = $match['number'];
     }
 
     public function getDistance()
