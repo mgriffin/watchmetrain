@@ -72,7 +72,9 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
     public function durationProvider()
     {
         return array(
-            array('1h 4m 35s', 3875)
+            array('1h 4m 35s', 3875),
+            array('4m 35s', 275),
+            array('35s', 35)
         );
     }
 }

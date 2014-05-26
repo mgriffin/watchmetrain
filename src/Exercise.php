@@ -42,7 +42,7 @@ class Exercise
 
     public function setDuration($duration)
     {
-        preg_match('/(?P<hours>\d+)h (?P<minutes>\d+)m (?P<seconds>\d+)s/', $duration, $match);
+        preg_match('/((?P<hours>\d+)h )?((?P<minutes>\d+)m )?((?P<seconds>\d+)s)/', $duration, $match);
         $hours = isset($match['hours']) ? $match['hours'] : 0;
         $minutes = isset($match['minutes']) ? $match['minutes'] : 0;
         $seconds = isset($match['seconds']) ? $match['seconds'] : 0;
