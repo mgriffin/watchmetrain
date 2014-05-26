@@ -27,6 +27,18 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $result);
     }
 
+    /**
+     * @dataProvider durationProvider
+     */
+    public function testDuration($duration, $expected)
+    {
+        $exercise = new \WMT\Exercise();
+        $exercise->setDuration($duration);
+        $result = $exercise->getDuration();
+
+        $this->assertEquals($expected, $result);
+    }
+
     public function startTimeProvider()
     {
         return array(
@@ -45,6 +57,13 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
             array('5400', '5400'),
             array('5400m', '5400'),
             array('5.4km', '5400')
+        );
+    }
+
+    public function durationProvider()
+    {
+        return array(
+            array('1h 4m 35s', 3875)
         );
     }
 }

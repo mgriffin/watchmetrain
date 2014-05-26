@@ -34,4 +34,19 @@ class Exercise
     {
         return $this->distance;
     }
+
+    public function setDuration($duration)
+    {
+        preg_match('/(?P<hours>\d+)h (?P<minutes>\d+)m (?P<seconds>\d+)s/', $duration, $match);
+        $hours = isset($match['hours']) ? $match['hours'] : 0;
+        $minutes = isset($match['minutes']) ? $match['minutes'] : 0;
+        $seconds = isset($match['seconds']) ? $match['seconds'] : 0;
+
+        $this->duration = $seconds + ($minutes * 60) + ($hours * 60 * 60);
+    }
+
+    public function getDuration()
+    {
+        return $this->duration;
+    }
 }
