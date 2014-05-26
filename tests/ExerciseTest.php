@@ -48,6 +48,18 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($exercise->isDeleted());
     }
 
+    /**
+     * @dataProvider commentProvider
+     */
+    public function testComment($comment, $expected)
+    {
+        $exercise = new \WMT\Exercise();
+        $exercise->setComment($comment);
+        $result = $exercise->getComment();
+
+        $this->assertEquals($expected, $result);
+    }
+
     public function startTimeProvider()
     {
         return array(
@@ -75,6 +87,13 @@ class ExerciseTest extends \PHPUnit_Framework_TestCase
             array('1h 4m 35s', 3875),
             array('4m 35s', 275),
             array('35s', 35)
+        );
+    }
+
+    public function commentProvider()
+    {
+        return array(
+            array('', '')
         );
     }
 }
