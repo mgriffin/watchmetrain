@@ -23,7 +23,7 @@ if (file_exists(APP_ROOT . 'database.php')) {
 } else {
     throw new RuntimeException("There is no database configuration");
 }
-$app['env'] = $_ENV['env'] ?: 'dev';
+$app['env'] = array_key_exists('env', $_ENV) ? $_ENV['env'] : 'dev';
  
 if ('test' === $app['env']) {
     $app['db'] = new \PDO('sqlite::memory:');

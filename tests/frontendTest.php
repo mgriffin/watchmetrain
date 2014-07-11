@@ -8,6 +8,7 @@ class frontendTest extends WebTestCase
         $app = require __DIR__.'/../bootstrap.php';
         $app['debug'] = true;
         $app['exception_handler']->disable();
+        $_ENV['env'] = 'test';
 
         return $app;
     }
