@@ -27,6 +27,12 @@ class Api
         return $this->sendRequest('athlete/activities?page=' . $page);
     }
 
+    public function getActivitiesNewerThan($date)
+    {
+        $seconds = strtotime($date);
+        return $this->sendRequest('athlete/activities?after=' . $seconds);
+    }
+
     protected function sendRequest($query)
     {
         try {
