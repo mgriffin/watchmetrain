@@ -2,7 +2,8 @@
   "require": {
     "silex/silex": "1.1.*",
     "twig/twig": "1.15.*",
-    "netcarver/textile": "3.5.*"
+    "netcarver/textile": "3.5.*",
+    "guzzlehttp/guzzle": "4.*"
   },
   "require-dev": {
     "symfony/browser-kit": ">=2.3,<2.4-dev"
