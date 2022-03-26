@@ -1,7 +1,7 @@
 {
   "require": {
     "silex/silex": "1.1.*",
-    "twig/twig": "1.15.*",
+    "twig/twig": "1.38.*",
     "netcarver/textile": "3.5.*",
     "guzzlehttp/guzzle": "4.*"
   },
